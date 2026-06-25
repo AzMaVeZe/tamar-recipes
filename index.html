@@ -3,795 +3,852 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>המתכונים של תמר 🍰</title>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <title>המתכונים של תמר 🍳</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Secular+One&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Heebo', sans-serif;
-            background: linear-gradient(135deg, #fce4ec 0%, #e8eaf6 25%, #fff3e0 50%, #f3e5f5 75%, #e0f7fa 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
-            color: #4a3728;
-            overflow-x: hidden;
-        }
-
-        /* Floating decorative elements */
-        .decoration {
-            position: fixed;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.15;
-            font-size: 3rem;
-            animation: float 6s ease-in-out infinite;
-        }
-        .decoration:nth-child(1) { top: 5%; left: 5%; animation-delay: 0s; }
-        .decoration:nth-child(2) { top: 15%; right: 8%; animation-delay: 1s; font-size: 2.5rem; }
-        .decoration:nth-child(3) { top: 40%; left: 3%; animation-delay: 2s; }
-        .decoration:nth-child(4) { top: 60%; right: 5%; animation-delay: 3s; font-size: 2rem; }
-        .decoration:nth-child(5) { top: 80%; left: 8%; animation-delay: 4s; }
-        .decoration:nth-child(6) { top: 25%; left: 50%; animation-delay: 1.5s; font-size: 2rem; }
-        .decoration:nth-child(7) { top: 70%; right: 20%; animation-delay: 2.5s; font-size: 2.5rem; }
-        .decoration:nth-child(8) { top: 90%; left: 30%; animation-delay: 3.5s; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
+            background: linear-gradient(135deg, #faf7f2 0%, #f8e5f3 50%, #e5f0f8 100%);
+            color: #3d2c2c;
+            line-height: 1.7;
         }
 
         /* Header */
-        .header {
+        header {
+            background: linear-gradient(135deg, #f4a8c0 0%, #d8a8f0 50%, #a8d4f8 100%);
+            color: white;
             text-align: center;
-            padding: 3rem 1rem 2rem;
+            padding: 3rem 1rem 2.5rem;
             position: relative;
-            z-index: 1;
+            overflow: hidden;
         }
-
-        .header h1 {
-            font-family: 'Rubik Bubbles', cursive;
-            font-size: 3.5rem;
-            color: #e91e63;
-            text-shadow: 2px 2px 4px rgba(233, 30, 99, 0.2);
-            margin-bottom: 0.5rem;
-            animation: titleGlow 3s ease-in-out infinite;
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: shimmer 8s ease-in-out infinite;
         }
-
-        @keyframes titleGlow {
-            0%, 100% { text-shadow: 2px 2px 4px rgba(233, 30, 99, 0.2); }
-            50% { text-shadow: 2px 2px 8px rgba(233, 30, 99, 0.4), 0 0 20px rgba(233, 30, 99, 0.1); }
+        @keyframes shimmer {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(5%, 5%); }
         }
-
-        .header .subtitle {
-            font-size: 1.2rem;
-            color: #8d6e63;
+        header h1 {
+            font-family: 'Secular One', sans-serif;
+            font-size: 2.8rem;
+            position: relative;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+        header p {
+            font-size: 1.15rem;
+            margin-top: 0.5rem;
+            opacity: 0.92;
+            position: relative;
             font-weight: 300;
         }
 
-        .header .baker-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* Search and Filter */
-        .controls {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-            padding: 0 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            border: 2px solid #f8bbd0;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-family: 'Heebo', sans-serif;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            outline: none;
-            transition: all 0.3s ease;
-            text-align: right;
-        }
-
-        .search-box:focus {
-            border-color: #e91e63;
-            box-shadow: 0 0 20px rgba(233, 30, 99, 0.15);
-        }
-
-        .search-box::placeholder {
-            color: #ce93d8;
-        }
-
-        .categories {
+        /* Navigation / Filter */
+        .filter-bar {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
             justify-content: center;
-            margin-top: 1rem;
+            gap: 0.5rem;
+            padding: 1.2rem 1rem;
+            background: white;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-
-        .category-btn {
+        .filter-btn {
             padding: 0.5rem 1.2rem;
-            border: 2px solid #f8bbd0;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.7);
-            color: #ad1457;
+            border: 2px solid #e8d5c4;
+            border-radius: 50px;
+            background: transparent;
             font-family: 'Heebo', sans-serif;
             font-size: 0.95rem;
+            font-weight: 500;
+            color: #7a5c4f;
             cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
+            transition: all 0.25s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(135deg, #f4a8c0, #d8a8f0);
+            border-color: #d8a8f0;
+            color: white;
         }
 
-        .category-btn:hover, .category-btn.active {
-            background: linear-gradient(135deg, #f48fb1, #ce93d8);
-            color: white;
-            border-color: transparent;
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+        /* Search */
+        .search-container {
+            max-width: 500px;
+            margin: 1.5rem auto 0;
+            padding: 0 1rem;
+        }
+        .search-box {
+            width: 100%;
+            padding: 0.75rem 1.2rem;
+            border: 2px solid #e8d5c4;
+            border-radius: 50px;
+            font-family: 'Heebo', sans-serif;
+            font-size: 1rem;
+            background: white;
+            outline: none;
+            transition: border-color 0.25s;
+        }
+        .search-box:focus {
+            border-color: #e76f51;
+        }
+        .search-box::placeholder {
+            color: #bda89a;
         }
 
         /* Recipe Grid */
-        .recipes-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem 3rem;
+        .recipes-container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.2rem;
+        }
+        .recipe-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 2rem;
-            position: relative;
-            z-index: 1;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
         /* Recipe Card */
         .recipe-card {
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(15px);
-            border-radius: 24px;
+            background: white;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
-            border: 1px solid rgba(248, 187, 208, 0.3);
         }
-
         .recipe-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(233, 30, 99, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
         }
-
-        .recipe-card-header {
-            padding: 1.5rem 1.5rem 1rem;
-            position: relative;
-        }
-
-        .recipe-emoji {
-            font-size: 3.5rem;
-            text-align: center;
-            margin-bottom: 0.5rem;
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             display: block;
         }
-
-        .recipe-card-header h2 {
-            font-size: 1.5rem;
-            color: #ad1457;
-            text-align: center;
-            font-weight: 700;
+        .card-placeholder {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #f8e5f3, #e5f0f8);
+            position: relative;
+            overflow: hidden;
         }
-
-        .recipe-type {
+        .card-placeholder::before {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: radial-gradient(circle, rgba(255,200,200,0.3) 0%, transparent 70%);
+            top: 20%;
+            left: 10%;
+            border-radius: 50%;
+        }
+        .card-placeholder::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, rgba(200,200,255,0.2) 0%, transparent 70%);
+            bottom: 15%;
+            right: 15%;
+            border-radius: 50%;
+        }
+        .card-body {
+            padding: 1.2rem;
+        }
+        .card-category {
             display: inline-block;
-            padding: 0.25rem 0.8rem;
-            border-radius: 15px;
+            padding: 0.2rem 0.7rem;
+            background: linear-gradient(135deg, #f8c5d6, #d8c5f8);
+            color: #8a5c7a;
+            border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 500;
-            margin-top: 0.5rem;
-            text-align: center;
-            width: 100%;
+            margin-bottom: 0.5rem;
         }
-
-        .type-אפייה { background: #fce4ec; color: #c2185b; }
-        .type-בישול { background: #fff3e0; color: #e65100; }
-        .type-סלטים { background: #e8f5e9; color: #2e7d32; }
-        .type-קינוחים { background: #f3e5f5; color: #7b1fa2; }
-        .type-שתייה { background: #e3f2fd; color: #1565c0; }
-
-        .recipe-card-body {
-            padding: 0 1.5rem 1.5rem;
-        }
-
-        .recipe-section {
-            margin-bottom: 1rem;
-        }
-
-        .recipe-section-title {
-            font-weight: 700;
-            color: #e91e63;
-            font-size: 0.95rem;
+        .card-title {
+            font-family: 'Secular One', sans-serif;
+            font-size: 1.3rem;
             margin-bottom: 0.4rem;
+            color: #3d2c2c;
+        }
+        .card-desc {
+            font-size: 0.92rem;
+            color: #8a7066;
+            margin-bottom: 0.8rem;
+        }
+        .card-meta {
             display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .recipe-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .recipe-section ul li {
-            padding: 0.2rem 0;
-            font-size: 0.9rem;
-            color: #5d4037;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-
-        .recipe-section ul li::before {
-            content: '•';
-            color: #f48fb1;
-            font-weight: bold;
-        }
-
-        .recipe-steps {
-            font-size: 0.9rem;
-            color: #5d4037;
-            line-height: 1.7;
-        }
-
-        .recipe-note {
-            background: linear-gradient(135deg, #fff9c4, #ffe0b2);
-            padding: 0.8rem 1rem;
-            border-radius: 12px;
+            gap: 1rem;
             font-size: 0.85rem;
-            color: #795548;
-            margin-top: 0.5rem;
+            color: #a08979;
         }
-
-        .recipe-note::before {
-            content: '💡 ';
-        }
-
-        /* Expand/Collapse */
-        .recipe-card-body .recipe-steps,
-        .recipe-card-body .recipe-note {
-            display: none;
-        }
-
-        .recipe-card.expanded .recipe-steps,
-        .recipe-card.expanded .recipe-note {
-            display: block;
-        }
-
-        .recipe-card.expanded .recipe-section.ingredients-section ul li:nth-child(n+5) {
-            display: list-item;
-        }
-
-        .expand-hint {
-            text-align: center;
-            font-size: 0.8rem;
-            color: #ce93d8;
-            padding: 0.5rem;
-            transition: opacity 0.3s;
-        }
-
-        .recipe-card.expanded .expand-hint {
-            opacity: 0;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 2rem;
-            color: #b39ddb;
-            font-size: 0.9rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer .heart {
-            color: #e91e63;
-            animation: heartbeat 1.5s ease-in-out infinite;
+        .card-meta span { display: flex; align-items: center; gap: 0.3rem; }
+        
+        /* Decorative icons */
+        .icon-mini {
+            width: 18px;
+            height: 18px;
             display: inline-block;
         }
-
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+        .cooking-glyph {
+            display: inline-block;
+            font-size: 1.1rem;
+            margin-right: 0.2rem;
         }
 
-        /* Modal for full recipe */
+        /* Modal */
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 100;
-            justify-content: center;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
             align-items: center;
+            justify-content: center;
             padding: 1rem;
-            backdrop-filter: blur(5px);
         }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
+        .modal-overlay.open { display: flex; }
         .modal {
-            background: linear-gradient(135deg, #fff, #fce4ec);
-            border-radius: 24px;
-            max-width: 600px;
+            background: white;
+            border-radius: 20px;
+            max-width: 650px;
             width: 100%;
-            max-height: 85vh;
+            max-height: 90vh;
             overflow-y: auto;
-            padding: 2rem;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            animation: slideUp 0.3s ease;
         }
-
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
         .modal-close {
             position: absolute;
             top: 1rem;
             left: 1rem;
-            background: #f8bbd0;
-            border: none;
-            border-radius: 50%;
             width: 36px;
             height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,0.9);
             font-size: 1.2rem;
             cursor: pointer;
+            z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
-
-        .modal-close:hover {
-            background: #e91e63;
-            color: white;
+        .modal-image {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
         }
-
-        .modal .recipe-emoji {
-            font-size: 4.5rem;
+        .modal-placeholder {
+            width: 100%;
+            height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            background: linear-gradient(135deg, #f8e5f3, #e5f0f8);
+            border-radius: 20px 20px 0 0;
+            position: relative;
+            overflow: hidden;
         }
-
-        .modal h2 {
-            text-align: center;
-            color: #ad1457;
+        .modal-placeholder::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(255,200,200,0.3) 0%, transparent 70%);
+            top: 10%;
+            left: 5%;
+            border-radius: 50%;
+        }
+        .modal-placeholder::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(200,200,255,0.2) 0%, transparent 70%);
+            bottom: 10%;
+            right: 10%;
+            border-radius: 50%;
+        }
+        .modal-body {
+            padding: 1.5rem 2rem 2rem;
+        }
+        .modal-body h2 {
+            font-family: 'Secular One', sans-serif;
             font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.3rem;
         }
-
-        .modal .recipe-type {
-            display: block;
-            width: fit-content;
-            margin: 0.5rem auto 1.5rem;
+        .modal-body .modal-desc {
+            color: #8a7066;
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
         }
-
-        .modal .recipe-section {
+        .modal-info {
+            display: flex;
+            gap: 1.5rem;
             margin-bottom: 1.5rem;
+            flex-wrap: wrap;
         }
-
-        .modal .recipe-section-title {
-            font-size: 1.1rem;
+        .modal-info .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.6rem 1rem;
+            background: linear-gradient(135deg, #f8e5f3, #e5f0f8);
+            border-radius: 12px;
+            min-width: 80px;
+        }
+        .info-item .info-label {
+            font-size: 0.75rem;
+            color: #a08979;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .info-item .info-value {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #3d2c2c;
+        }
+        .modal-body h3 {
+            font-size: 1.15rem;
+            margin: 1.2rem 0 0.6rem;
+            color: #d8a8f0;
+        }
+        .modal-body ul {
+            padding-right: 1.2rem;
+        }
+        .modal-body li {
+            margin-bottom: 0.35rem;
+            color: #5a4440;
+        }
+        .modal-body ol {
+            padding-right: 1.2rem;
+        }
+        .modal-body ol li {
             margin-bottom: 0.6rem;
+            color: #5a4440;
+            line-height: 1.6;
+        }
+        .modal-body .notes {
+            background: #f8e5f3;
+            border-right: 4px solid #d8a8f0;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            font-size: 0.92rem;
+            color: #8a5c7a;
         }
 
-        .modal .recipe-section ul li {
-            font-size: 1rem;
-            padding: 0.3rem 0;
+        /* No results */
+        .no-results {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #bda89a;
+            font-size: 1.15rem;
         }
 
-        .modal .recipe-steps {
-            font-size: 1rem;
-            line-height: 1.8;
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #bda89a;
+            font-size: 0.9rem;
         }
-
-        .modal .recipe-note {
-            font-size: 0.95rem;
-            padding: 1rem 1.2rem;
-        }
+        footer .heart { color: #e76f51; }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2.5rem;
-            }
-
-            .recipes-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .modal {
-                padding: 1.5rem;
-                margin: 0.5rem;
-            }
-        }
-
-        /* Print styles */
-        @media print {
-            .decoration, .controls, .expand-hint { display: none !important; }
-            .recipe-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
-            body { background: white; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .recipe-grid { grid-template-columns: 1fr; }
+            .modal-body { padding: 1.2rem 1.2rem 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- Floating decorations -->
-<div class="decoration">🍰</div>
-<div class="decoration">🧁</div>
-<div class="decoration">🍩</div>
-<div class="decoration">🍪</div>
-<div class="decoration">🍓</div>
-<div class="decoration">🎂</div>
-<div class="decoration">🍫</div>
-<div class="decoration">✨</div>
-
-<!-- Header -->
-<header class="header">
-    <span class="baker-icon">👩‍🍳</span>
-    <h1>המתכונים של תמר</h1>
-    <p class="subtitle">אוסף מתכונים ביתיים עם אהבה 💕</p>
+<header>
+    <h1>המתכונים של תמר 🍳</h1>
+    <p>אוסף מתכונים ביתיים עם אהבה</p>
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="🔍  חפש מתכון..." id="searchInput">
+    </div>
 </header>
 
-<!-- Search & Filter -->
-<div class="controls">
-    <input type="text" class="search-box" id="searchBox" placeholder="🔍  חפשו מתכון...">
-    <div class="categories">
-        <button class="category-btn active" data-category="הכל">הכל</button>
-        <button class="category-btn" data-category="אפייה">🧁 אפייה</button>
-        <button class="category-btn" data-category="בישול">🍲 בישול</button>
-        <button class="category-btn" data-category="סלטים">🥗 סלטים</button>
-        <button class="category-btn" data-category="קינוחים">🍰 קינוחים</button>
-        <button class="category-btn" data-category="שתייה">🥤 שתייה</button>
-    </div>
-</div>
+<nav class="filter-bar" id="filterBar">
+    <button class="filter-btn active" data-cat="הכל">הכל</button>
+    <button class="filter-btn" data-cat="עיקריות">עיקריות</button>
+    <button class="filter-btn" data-cat="סלטים">סלטים</button>
+    <button class="filter-btn" data-cat="מרקים">מרקים</button>
+    <button class="filter-btn" data-cat="קינוחים">קינוחים</button>
+    <button class="filter-btn" data-cat="אפייה">אפייה</button>
+    <button class="filter-btn" data-cat="תוספות">תוספות</button>
+</nav>
 
-<!-- Recipes Grid -->
-<div class="recipes-grid" id="recipesGrid">
-</div>
+<main class="recipes-container">
+    <div class="recipe-grid" id="recipeGrid"></div>
+    <div class="no-results" id="noResults" style="display:none;">😕 לא נמצאו מתכונים</div>
+</main>
 
 <!-- Modal -->
 <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" id="modalContent">
-        <button class="modal-close" onclick="closeModal()">✕</button>
-        <div id="modalBody"></div>
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div id="modalContent"></div>
     </div>
 </div>
 
-<!-- Footer -->
-<footer class="footer">
-    <p>נוצר באהבה <span class="heart">❤️</span> עבור תמר</p>
-    <p style="margin-top: 0.5rem; font-size: 0.8rem;">✨ כל המתכונים נבדקו ואושרו על ידי המשפחה ✨</p>
+<footer>
+    <p>נוצר באהבה <span class="heart">♥</span> עבור תמר</p>
 </footer>
 
 <script>
-// Recipe Data
+// ============ מתכונים כאן ============
+// כדי להוסיף מתכון חדש — מעתיקים את הפורמט ומשנים את הנתונים
 const recipes = [
     {
         id: 1,
-        name: "עוגת שוקולד חלומית",
-        emoji: "🍫",
-        category: "אפייה",
+        title: "שקשוקה קלאסית",
+        emoji: "🍳",
+        category: "עיקריות",
+        desc: "שקשוקה עם רוטב עגבניות עשיר וביצים רכות",
+        time: "25 דק'",
+        servings: "4",
+        difficulty: "קל",
+        image: "",
         ingredients: [
-            "2 כוסות קמח",
-            "1 כוס סוכר",
-            "3 ביצים",
-            "200 גרם שוקולד מריר",
-            "1 כוס חלב",
-            "חצי כוס שמן",
-            "1 אבקת אפייה",
-            "כפית תמצית וניל"
+            "6 עגבניות גדולות ורכות",
+            "4 ביצים",
+            "1 בצל קצוץ",
+            "4 שיני שום קצוצות",
+            "1 פלפל אדום קצוץ",
+            "2 כפות שמן זית",
+            "1 כפית כמון",
+            "1 כפית פפריקה מתוקה",
+            "חצי כפית סוכר",
+            "מלח ופלפל לפי הטעם",
+            "פטרוזיליה קצוצה לקישוט"
         ],
-        steps: "מחממים תנור ל-180°. ממיסים שוקולד במיקרוגל. מערבבים בקערה גדולה ביצים וסוכר, מוסיפים שמן וחלב. מוסיפים את השוקולד המומס, ואז קמח ואבקת אפייה. יוצקים לתבנית ואופים 35-40 דקות.",
-        note: "הסוד: לא לאפות יותר מדי! העוגה צריכה לצאת קצת לחה מבפנים. אפשר להוסיף כף נס קפה לטעם עמוק יותר."
+        steps: [
+            "מחממים שמן זית במחבת רחבה ומטגנים בצל עד שקיפות.",
+            "מוסיפים שום ופלפל אדום ומערבבים 2 דקות.",
+            "מוסיפים עגבניות מגורדות, כמון, פפריקה, סוכר, מלח ופלפל. מערבבים היטב.",
+            "מביאים לרתיחה, מנמיכים אש ומבשלים 10 דקות עד שהרוטב מסמיך.",
+            "יוצרים גומות ברוטב ושוברים לתוכן ביצים.",
+            "מכסים ומבשלים 5-7 דקות עד שהביצים מתייצבות אך החלמון עדיין רך.",
+            "מגישים עם פטרוזיליה ולחם טרי."
+        ],
+        notes: "אפשר להוסיף פלפל חריף למי שאוהב. טעים במיוחד עם לחם כפרים טרי."
     },
     {
         id: 2,
-        name: "סלט יווני עם זיתים",
-        emoji: "🥗",
-        category: "סלטים",
+        title: "עוף בתנור עם תפוחי אדמה",
+        emoji: "🍗",
+        category: "עיקריות",
+        desc: "עוף עסיסי עם תפוחי אדמה פריכים ותיבול מזרחי",
+        time: "1 שעה",
+        servings: "6",
+        difficulty: "קל",
+        image: "",
         ingredients: [
-            "3 עגבניות גדולות",
-            "2 מלפפונים",
-            "1 בצל סגול",
-            "200 גרם גבינת פטה",
-            "חצי כוס זיתים שחורים",
-            "שמן זית",
-            "מיץ לימון",
-            "אורגנו יבש",
-            "מלח ופלפל"
+            "8 שוקי עוף",
+            "6 תפוחי אדמה בינוניים, חתוכים לרבעים",
+            "2 בצלים גדולים, חתוכים לפרוסות",
+            "8 שיני שום שלמות",
+            "3 כפות שמן זית",
+            "2 כפות פפריקה מתוקה",
+            "1 כפית כורכום",
+            "1 כפית כמון",
+            "מלח ופלפל שחור",
+            "מיץ לימון אחד"
         ],
-        steps: "חותכים את הירקות לקוביות גדולות. מפוררים את הגבינה מעל. מזלפים שמן זית ומיץ לימון. מתבלים במלח, פלפל ואורגנו. מערבבים בעדינות ומגישים מיד.",
-        note: "אפשר להוסיף עלי אורגנו טריים. חשוב לא לערבב יותר מדי כדי שהירקות ישמרו על הצורה."
+        steps: [
+            "מערבבים את כל התבלינים עם שמן זית ומיץ לימון.",
+            "משרים את שוקי העוף בתערובת התבלינים לחצי שעה לפחות.",
+            "מסדרים את תפוחי האדמה והבצל בתחתית תנית גדולה.",
+            "מניחים את שוקי העוף מעל.",
+            "מוסיפים חצי כוס מים ומכסים בנייר כסף.",
+            "אופים ב-190 מעלות 40 דקות.",
+            "מסירים את נייר הכסף ואופים עוד 20 דקות עד השחמה."
+        ],
+        notes: "אפשר להוסיף גזר ובטטה. יוצא טעים במיוחד עם סלט ירקות טרי."
     },
     {
         id: 3,
-        name: "עוגיות שוקולד צ'יפס",
-        emoji: "🍪",
-        category: "אפייה",
+        title: "סלט יווני",
+        emoji: "🥗",
+        category: "סלטים",
+        desc: "סלט רענן עם גבינת פטה, זיתים ותיבול לימון",
+        time: "15 דק'",
+        servings: "4",
+        difficulty: "קל",
+        image: "",
         ingredients: [
-            "2 כוסות קמח",
-            "1 כוס חמאה רכה",
-            "3/4 כוס סוכר חום",
-            "3/4 כוס סוכר לבן",
-            "2 ביצים",
-            "כפית סודה לשתייה",
-            "כפית וניל",
-            "200 גרם שוקולד צ'יפס"
+            "4 עגבניות בשלות, חתוכות לקוביות",
+            "3 מלפפונים, חתוכים לקוביות",
+            "1 פלפל אדום, חתוך לקוביות",
+            "1 בצל סגול, פרוס דק",
+            "200 גרם גבינת פטה, חתוכה לקוביות",
+            "חצי כוס זיתים שחורים",
+            "3 כפות שמן זית",
+            "מיץ לימון אחד",
+            "אורגנו יבש",
+            "מלח"
         ],
-        steps: "מחממים תנור ל-190°. מערבבים חמאה ושני סוגי סוכר. מוסיפים ביצים ווניל. מוסיפים קמח וסודה לשתייה. מערבבים שוקולד צ'יפס. יוצרים עיגולים על תבנית ואופים 10-12 דקות.",
-        note: "העוגיות ממשיכות להיאפות גם אחרי שמוציאים מהתנור! תוציאו כשהן עדיין רכות באמצע."
+        steps: [
+            "חותכים את כל הירקות ומניחים בקערה גדולה.",
+            "מוסיפים את גבינת הפטה והזיתים.",
+            "מערבבים שמן זית, מיץ לימון, אורגנו ומלח.",
+            "יוצקים את הרוטב על הסלט ומערבבים בעדינות.",
+            "מגישים מיד."
+        ],
+        notes: "הסלט טעים יותר אחרי 10 דקות שהטעמים נספגים. אפשר להוסיף זיתי קלמטה."
     },
     {
         id: 4,
-        name: "מרק עגבניות ביתי",
-        emoji: "🍅",
-        category: "בישול",
+        title: "מרק עוף עם ירקות",
+        emoji: "🍲",
+        category: "מרקים",
+        desc: "מרק עוף ביתי מחמם ומזין כמו של סבתא",
+        time: "1.5 שעות",
+        servings: "8",
+        difficulty: "קל",
+        image: "",
         ingredients: [
-            "1 קילו עגבניות בשלות",
-            "1 בצל גדול",
-            "3 שיני שום",
-            "2 כפות שמן זית",
-            "500 מ\"ל מרק עוף",
-            "כף סוכר",
-            "מלח, פלפל, בזיליקום",
-            "שמנת לבישול (אופציונלי)"
+            "1 עוף שלם (או 4 שוקיים)",
+            "3 גזרים, חתוכים לפרוסות",
+            "3 תפוחי אדמה, חתוכים לקוביות",
+            "2 קישואים, חתוכים לפרוסות",
+            "1 בצל שלם",
+            "4 שיני שום",
+            "צרור פטרוזיליה",
+            "צרור שמיר",
+            "כפית כורכום",
+            "מלח ופלפל",
+            "מים (כ-3 ליטר)"
         ],
-        steps: "מטגנים בצל ושום בשמן זית. מוסיפים עגבניות חתוכות ומבשלים 10 דקות. מוסיפים מרק עוף ותבלינים. מביאים לרתיחה ומנמיכים. מבשלים 20 דקות. טוחנים בבלנדר למרקם חלק.",
-        note: "אפשר להכין כמות גדולה ולהקפיא. טעים במיוחד עם קרוטונים ביתיים וגבינה מגורדת!"
+        steps: [
+            "שמים את העוף בסיר גדול עם מים ומביאים לרתיחה.",
+            "מסירים קצף ומנמיכים אש.",
+            "מוסיפים בצל שלם, שום, כורכום, מלח ופלפל.",
+            "מבשלים שעה על אש נמוכה.",
+            "מוציאים את העוף, מפרקים את הבשר ומחזירים לסיר.",
+            "מוסיפים גזרים, תפוחי אדמה וקישואים.",
+            "מבשלים 20 דקות נוספות עד שהירקות רכים.",
+            "מוסיפים פטרוזיליה ושמיר קצוצים ומגישים."
+        ],
+        notes: "אפשר להוסיף אטריות דקות 5 דקות לפני הסוף. המרק טעים עוד יותר ביום למחרת."
     },
     {
         id: 5,
-        name: "לימונדה עם נענע",
-        emoji: "🍋",
-        category: "שתייה",
+        title: "布朗יז שוקולד",
+        emoji: "🍫",
+        category: "קינוחים",
+        desc: "布朗יז עשיר ושוקולדי עם מרקם פאדג'י מושלם",
+        time: "45 דק'",
+        servings: "12",
+        difficulty: "קל",
+        image: "",
         ingredients: [
-            "6 לימונים גדולים",
-            "1 כוס סוכר",
-            "1.5 ליטר מים קרים",
-            "צרור נענע טרייה",
-            "קוביות קרח"
+            "200 גרם שוקולד מריר",
+            "150 גרם חמאה",
+            "3 ביצים",
+            "200 גרם סוכר",
+            "100 גרם קמח",
+            "30 גרם אבקת קקאו",
+            "כפית תמצית וניל",
+            "קורט מלח"
         ],
-        steps: "סוחטים את הלימונים. מכינים סירופ סוכר: ממיסים סוכר בכוס מים חמים. מערבבים מיץ לימון, סירופ ומים קרים. מוסיפים עלי נענע וקוביות קרח.",
-        note: "אפשר להמיר חלק מהסוכר בדבש. להגשה חגיגית - מוסיפים פירות יער קפואים במקום קרח!"
+        steps: [
+            "ממיסים שוקולד וחמאה יחד (במיקרוגל או על בן מארי).",
+            "טורפים ביצים וסוכר עד שהתערובת תפוחה.",
+            "מוסיפים את תערובת השוקולד ומערבבים.",
+            "מוסיפים קמח, קקאו, וניל ומלח. מערבבים רק עד לאיחוד.",
+            "יוצקים לתבנית מרופדת בנייר אפייה.",
+            "אופים ב-175 מעלות 25-30 דקות.",
+            "מוציאים ומצננים לפני שחותכים."
+        ],
+        notes: "הסוד הוא לא לאפות יותר מדי —布朗יז צריך להיות קצת רך מבפנים. אפשר להוסיף אגוזים או שבבי שוקולד."
     },
     {
         id: 6,
-        name: "פנקייקים fluffy",
-        emoji: "🥞",
+        title: "חלה לשבת",
+        emoji: "🍞",
         category: "אפייה",
+        desc: "חלה רכה ומתוקה לשבת — ריח שאי אפשר לעמוד בו",
+        time: "3 שעות",
+        servings: "2 חלות",
+        difficulty: "בינוני",
+        image: "",
+        ingredients: [
+            "1 ק״ג קמח",
+            "2 כפות שמרים יבשים",
+            "150 גרם סוכר",
+            "2 ביצים",
+            "60 מ״ל שמן",
+            "1.5 כוסות מים פושרים",
+            "1 כף מלח",
+            "ביצל׳ה להברשה + שומשום"
+        ],
+        steps: [
+            "מערבבים קמח, שמרים וסוכר.",
+            "מוסיפים ביצים, שמן ומים ולשים 10 דקות.",
+            "מוסיפים מלח ולשים עוד 5 דקות עד לבצק חלק וגמיש.",
+            "מתפיחים שעה וחצי מכוסה.",
+            "מחלקים את הבצק ל-6 רצועות ומגלגלים לצמות.",
+            "מתפיחים עוד 45 דקות.",
+            "מברישים בביצה טרופה ומפזרים שומשום.",
+            "אופים ב-180 מעלות 25-30 דקות עד הזהבה."
+        ],
+        notes: "החומרים ל-2 חלות גדולות. אפשר להכפיל כמויות. הכי טעים חם מהתנור עם חמאה."
+    },
+    {
+        id: 7,
+        title: "אורז עם ירקות",
+        emoji: "🍚",
+        category: "תוספות",
+        desc: "אורז צבעוני עם ירקות — תוספת מושלמת לכל ארוחה",
+        time: "30 דק'",
+        servings: "6",
+        difficulty: "קל",
+        image: "",
+        ingredients: [
+            "2 כוסות אורז (שטוף היטב)",
+            "1 גזר מגורד",
+            "חצי כוס אפונה",
+            "חצי כוס תירס",
+            "1 בצל קצוץ",
+            "2 כפות שמן",
+            "כפית כורכום",
+            "כפית מלח",
+            "3.5 כוסות מים רותחים"
+        ],
+        steps: [
+            "מטגנים בצל בשמן עד שקיפות.",
+            "מוסיפים גזר, אפונה ותירס ומערבבים 2 דקות.",
+            "מוסיפים אורז ומערבבים דקה.",
+            "מוסיפים כורכום, מלח ומים רותחים.",
+            "מביאים לרתיחה, מנמיכים אש ומכסים.",
+            "מבשלים 18 דקות בלי לפתוח את המכסה.",
+            "מכבים אש ומשאירים מכוסה 10 דקות נוספות.",
+            "מפוררים עם מזלג ומגישים."
+        ],
+        notes: "אפשר להוסיף צימוקים ושקדים מטוגנים לחגיגי יותר."
+    },
+    {
+        id: 8,
+        title: "לזניה בשרית",
+        emoji: "🍝",
+        category: "עיקריות",
+        desc: "לזניה עם רוטב בשר, בשמל וגבינה — נחמה איטלקית",
+        time: "1.5 שעות",
+        servings: "8",
+        difficulty: "בינוני",
+        image: "",
+        ingredients: [
+            "500 גרם בשר בקר טחון",
+            "1 בצל קצוץ",
+            "3 שיני שום",
+            "1 פחית עגבניות מרוסקות",
+            "2 כפות רסק עגבניות",
+            "כפית אורגנו + כפית בזיליקום",
+            "12 דפי לזניה",
+            "500 מ״ל רוטב בשמל מוכן",
+            "200 גרם גבינת מוצרלה מגורדת",
+            "100 גרם גבינת פרמזן מגורדת"
+        ],
+        steps: [
+            "מטגנים בצל ושום, מוסיפים בשר ומשחימים.",
+            "מוסיפים עגבניות מרוסקות, רסק, אורגנו ובזיליקום. מבשלים 15 דקות.",
+            "בסיר נפרד מכינים בשמל (או משתמשים במוכן).",
+            "מסדרים בתנית: רוטב בשר → דפי לזניה → בשמל → גבינה. חוזרים 3 פעמים.",
+            "מסיימים עם בשמל ומוצרלה ופרמזן מעל.",
+            "אופים ב-180 מעלות 40-45 דקות.",
+            "מוציאים ומחכים 10 דקות לפני שחותכים."
+        ],
+        notes: "אפשר להכין יום מראש ולחמם. יוצא אפילו יותר טעים כשמחממים."
+    },
+    {
+        id: 9,
+        title: "פסטו ביתי",
+        emoji: "🌿",
+        category: "תוספות",
+        desc: "רוטב פסטו טרי מבזיליקום, צנוברים ופרמזן",
+        time: "10 דק'",
+        servings: "צנצנת",
+        difficulty: "קל",
+        image: "",
+        ingredients: [
+            "2 כוסות עלי בזיליקום טריים",
+            "חצי כוס צנוברים קלויים",
+            "3 שיני שום",
+            "חצי כוס גבינת פרמזן מגורדת",
+            "שליש כוס שמן זית",
+            "מיץ מחצי לימון",
+            "מלח ופלפל"
+        ],
+        steps: [
+            "קולים צנוברים במחבת יבשה 2-3 דקות.",
+            "שמים את כל החומרים במעבד מזון.",
+            "מעבדים למרקם הרצוי — חלק או עם חתיכות.",
+            "טועמים ומתקנים תיבול.",
+            "מעבירים לצנצנת ושופכים שמן זית מעל לשימור."
+        ],
+        notes: "מחזיק במקרר שבועיים. אפשר להקפיא בקוביות קרח לשימוש עתידי."
+    },
+    {
+        id: 10,
+        title: "פנקייקים",
+        emoji: "🥞",
+        category: "קינוחים",
+        desc: "פנקייקים רכים ואווריריים — מושלמים לארוחת בוקר",
+        time: "20 דק'",
+        servings: "10 פנקייקים",
+        difficulty: "קל",
+        image: "",
         ingredients: [
             "1.5 כוסות קמח",
-            "כף סוכר",
-            "כפית אבקת אפייה",
+            "2 כפות סוכר",
+            "2 כפיות אבקת אפייה",
             "חצי כפית מלח",
             "1 ביצה",
             "1.25 כוסות חלב",
             "3 כפות חמאה מומסת",
-            "כפית וניל"
+            "כפית תמצית וניל"
         ],
-        steps: "מערבבים יבשים בקערה אחת ורטובים בקערה שנייה. ממזגים את שתי הקערות ומערבבים קצת (לא יותר מדי - גושים זה בסדר!). מחממים מחבת על אש בינונית. יוצקים מצקת ומחכים לבועות. הופכים ומחכים דקה נוספת.",
-        note: "הסוד לפנקייקים fluffy: לא לערבב את הבלילה יותר מדי! כמה שיותר גושים ככה יותר טוב 😄"
-    },
-    {
-        id: 7,
-        name: "פסטו ביתי",
-        emoji: "🌿",
-        category: "סלטים",
-        ingredients: [
-            "2 כוסות עלי בזיליקום טריים",
-            "חצי כוס צנוברים",
-            "חצי כוס פרמזן מגורד",
-            "2 שיני שום",
-            "חצי כוס שמן זית",
-            "מלח ופלפל"
+        steps: [
+            "מערבבים את החומרים היבשים בקערה.",
+            "בקערה נפרדת טורפים ביצה, חלב, חמאה מומסת ווניל.",
+            "יוצקים את הרטוב ליבש ומערבבים רק עד לאיחוד (זה בסדר עם יש גושים קטנים).",
+            "מחממים מחבת על אש בינונית ומשמנים קלות.",
+            "יוצקים מצקת בלילה ומחכים לבועות בצד העליון.",
+            "הופכים ומבשלים דקה נוספת.",
+            "מגישים עם מייפל, פירות טריים או שוקולד."
         ],
-        steps: "קולים צנוברים במחבת יבשה. שמים הכל במעבד מזון חוץ משמן זית. טוחנים ומוסיפים שמן בהדרגה עד למרקם הרצוי. מתבלים במלח ופלפל.",
-        note: "אפשר להחליף צנוברים באגוזי מלך או שקדים. שומרים בצנצנת עם שכבה דקה של שמן זית מעל."
-    },
-    {
-        id: 8,
-        name: "מוס שוקולד",
-        emoji: "🍮",
-        category: "קינוחים",
-        ingredients: [
-            "200 גרם שוקולד מריר",
-            "3 ביצים מופרדות",
-            "3 כפות סוכר",
-            "כפית תמצית וניל",
-            "קורט מלח",
-            "200 מ\"ל שמנת להקצפה"
-        ],
-        steps: "ממיסים שוקולד ומצננים. מקציפים חלבונים עם סוכר לקצף יציב. מקציפים שמנת. מערבבים חלמונים לתוך השוקולד. מוסיפים שמנת וחלבונים בתנועות קיפול עדינות. מחלקים לכוסות ומקפיאים לשעתיים לפחות.",
-        note: "הסוד: קיפול עדין! לא לערבב כדי לשמור על האווריריות. מגישים עם קצפת ופירות יער."
-    },
-    {
-        id: 9,
-        name: "שקשוקה ירוקה",
-        emoji: "🍳",
-        category: "בישול",
-        ingredients: [
-            "6 ביצים",
-            "2 קישואים גדולים",
-            "2 חצילים קטנים",
-            "300 גרם תרד טרי",
-            "1 בצל",
-            "3 שיני שום",
-            "200 מ\"ל שמנת לבישול",
-            "מלח, פלפל, כמון",
-            "שמן זית"
-        ],
-        steps: "חותכים קישואים וחצילים לקוביות. מטגנים בשמן זית עד הזהבה. מוסיפים בצל ושום. מוסיפים תרד ומחכים שיצמק. מוסיפים שמנת ותבלינים. יוצרים גומות ושוברים ביצים. מכסים ומבשלים 8-10 דקות.",
-        note: "מגישים עם לחם כפרי טרי. אפשר להוסיף גבינת פטה מפוררת מעל לפני ההגשה!"
-    },
-    {
-        id: 10,
-        name: "עוגת גבינה אפויה",
-        emoji: "🎂",
-        category: "קינוחים",
-        ingredients: [
-            "500 גרם גבינת שמנת",
-            "1 כוס סוכר",
-            "4 ביצים",
-            "1 כוס שמנת חמוצה",
-            "3 כפות קמח",
-            "כפית תמצית וניל",
-            "גרידת לימון",
-            "לתחתית: 200 גרם ביסקוויטים + 100 גרם חמאה"
-        ],
-        steps: "טוחנים ביסקוויטים ומערבבים עם חמאה מומסת. דוחסים לתחתית תבנית. מערבבים גבינת שמנת וסוכר. מוסיפים ביצים אחת אחת. מוסיפים שמנת, קמח, וניל וגרידת לימון. יוצקים על התחתית. אופים ב-160° שעה עם דלת פתוחה קצת.",
-        note: "חובה לקרר לילה שלם! הסדקים למעלה זה חלק מהיופי. אפשר לפזר אבקת סוכר או רוטב פירות יער."
+        notes: "הסוד הוא לא לערבב יותר מדי — זה מה שגורם להם להיות אווריריים."
     }
 ];
 
-// Render recipes
-function renderRecipes(filteredRecipes) {
-    const grid = document.getElementById('recipesGrid');
-    grid.innerHTML = '';
+// ============ Rendering ============
+const grid = document.getElementById('recipeGrid');
+const noResults = document.getElementById('noResults');
+let currentFilter = 'הכל';
 
-    filteredRecipes.forEach(recipe => {
+function renderCards(list) {
+    grid.innerHTML = '';
+    if (list.length === 0) {
+        noResults.style.display = 'block';
+        return;
+    }
+    noResults.style.display = 'none';
+    list.forEach(r => {
         const card = document.createElement('div');
         card.className = 'recipe-card';
-        card.setAttribute('data-category', recipe.category);
-        card.onclick = () => openModal(recipe);
-
-        // Show first 4 ingredients
-        const topIngredients = recipe.ingredients.slice(0, 4);
-
+        card.onclick = () => openModal(r);
         card.innerHTML = `
-            <div class="recipe-card-header">
-                <span class="recipe-emoji">${recipe.emoji}</span>
-                <h2>${recipe.name}</h2>
-                <span class="recipe-type type-${recipe.category}">${recipe.category}</span>
-            </div>
-            <div class="recipe-card-body">
-                <div class="recipe-section">
-                    <div class="recipe-section-title">🛒 מצרכים</div>
-                    <ul>
-                        ${topIngredients.map(i => `<li>${i}</li>`).join('')}
-                        ${recipe.ingredients.length > 4 ? `<li style="color:#ce93d8; font-size:0.8rem;">ועוד ${recipe.ingredients.length - 4} מצרכים...</li>` : ''}
-                    </ul>
+            ${r.image ? `<img class="card-image" src="${r.image}" alt="${r.title}">` : `<div class="card-placeholder">${r.emoji}</div>`}
+            <div class="card-body">
+                <span class="card-category">${r.category}</span>
+                <h3 class="card-title">${r.title}</h3>
+                <p class="card-desc">${r.desc}</p>
+                <div class="card-meta">
+                    <span><span class="cooking-glyph">⏱</span>${r.time}</span>
+                    <span><span class="cooking-glyph">🍽</span>${r.servings} מנות</span>
+                    <span><span class="cooking-glyph">✨</span>${r.difficulty}</span>
                 </div>
-                <div class="expand-hint">👆 לחצו לצפייה במתכון המלא</div>
             </div>
         `;
-
         grid.appendChild(card);
     });
 }
 
-// Search
-document.getElementById('searchBox').addEventListener('input', function(e) {
-    const query = e.target.value.trim();
-    const activeCategory = document.querySelector('.category-btn.active').dataset.category;
-
+function filterAndSearch() {
+    const q = document.getElementById('searchInput').value.trim().toLowerCase();
     let filtered = recipes;
-
-    if (activeCategory !== 'הכל') {
-        filtered = filtered.filter(r => r.category === activeCategory);
+    if (currentFilter !== 'הכל') {
+        filtered = filtered.filter(r => r.category === currentFilter);
     }
-
-    if (query) {
+    if (q) {
         filtered = filtered.filter(r =>
-            r.name.includes(query) ||
-            r.ingredients.some(i => i.includes(query)) ||
-            r.category.includes(query) ||
-            r.steps.includes(query)
+            r.title.includes(q) || r.desc.includes(q) ||
+            r.ingredients.some(i => i.includes(q)) ||
+            r.category.includes(q)
         );
     }
+    renderCards(filtered);
+}
 
-    renderRecipes(filtered);
+// Filter buttons
+document.getElementById('filterBar').addEventListener('click', e => {
+    if (!e.target.classList.contains('filter-btn')) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    e.target.classList.add('active');
+    currentFilter = e.target.dataset.cat;
+    filterAndSearch();
 });
 
-// Category filter
-document.querySelectorAll('.category-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        const category = this.dataset.category;
-        const query = document.getElementById('searchBox').value.trim();
-
-        let filtered = recipes;
-
-        if (category !== 'הכל') {
-            filtered = filtered.filter(r => r.category === category);
-        }
-
-        if (query) {
-            filtered = filtered.filter(r =>
-                r.name.includes(query) ||
-                r.ingredients.some(i => i.includes(query)) ||
-                r.steps.includes(query)
-            );
-        }
-
-        renderRecipes(filtered);
-    });
-});
+// Search
+document.getElementById('searchInput').addEventListener('input', filterAndSearch);
 
 // Modal
-function openModal(recipe) {
-    const modal = document.getElementById('modalOverlay');
-    const body = document.getElementById('modalBody');
-
-    body.innerHTML = `
-        <span class="recipe-emoji">${recipe.emoji}</span>
-        <h2>${recipe.name}</h2>
-        <span class="recipe-type type-${recipe.category}">${recipe.category}</span>
-
-        <div class="recipe-section">
-            <div class="recipe-section-title">🛒 מצרכים</div>
-            <ul>
-                ${recipe.ingredients.map(i => `<li>${i}</li>`).join('')}
-            </ul>
-        </div>
-
-        <div class="recipe-section">
-            <div class="recipe-section-title">👩‍🍳 אופן ההכנה</div>
-            <div class="recipe-steps">${recipe.steps}</div>
-        </div>
-
-        <div class="recipe-section">
-            <div class="recipe-section-title">💡 הערות וטיפים</div>
-            <div class="recipe-note">${recipe.note}</div>
+function openModal(r) {
+    const overlay = document.getElementById('modalOverlay');
+    const content = document.getElementById('modalContent');
+    content.innerHTML = `
+        ${r.image ? `<img class="modal-image" src="${r.image}" alt="${r.title}">` : `<div class="modal-placeholder">${r.emoji}</div>`}
+        <div class="modal-body">
+            <h2>${r.title}</h2>
+            <p class="modal-desc">${r.desc}</p>
+            <div class="modal-info">
+                <div class="info-item"><span class="cooking-glyph">⏱</span><span class="info-label">זמן</span><span class="info-value">${r.time}</span></div>
+                <div class="info-item"><span class="cooking-glyph">🍽</span><span class="info-label">מנות</span><span class="info-value">${r.servings}</span></div>
+                <div class="info-item"><span class="cooking-glyph">✨</span><span class="info-label">קושי</span><span class="info-value">${r.difficulty}</span></div>
+            </div>
+            <h3>מצרכים</h3>
+            <ul>${r.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+            <h3>אופן ההכנה</h3>
+            <ol>${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+            ${r.notes ? `<div class="notes">💡 <strong>טיפ:</strong> ${r.notes}</div>` : ''}
         </div>
     `;
-
-    modal.classList.add('active');
+    overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
 }
 
+document.getElementById('modalClose').onclick = closeModal;
+document.getElementById('modalOverlay').onclick = e => { if (e.target === e.currentTarget) closeModal(); };
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('active');
+    document.getElementById('modalOverlay').classList.remove('open');
     document.body.style.overflow = '';
 }
 
-document.getElementById('modalOverlay').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-});
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-});
-
 // Initial render
-renderRecipes(recipes);
+renderCards(recipes);
 </script>
-
 </body>
 </html>
