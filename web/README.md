@@ -22,22 +22,41 @@ folder to the OAuth client Wix created for us.
 
 ## Deploy
 
-Runs on your local machine (Wix CLI needs a browser login and outbound
-network access that this container doesn't have).
+Deploys are automated via GitHub Actions
+(`.github/workflows/wix-deploy.yml`). Every push that touches `web/**`
+publishes to the live URL above.
+
+### One-time setup (per repo)
+
+1. Create a Wix API key in the Wix account settings —
+   https://manage.wix.com/account/api-keys → **Generate API Key**.
+   Copy the value once (it's shown only once).
+2. In GitHub, go to
+   **Settings → Secrets and variables → Actions → New repository secret**,
+   name it `WIX_API_KEY`, paste the key.
+3. Push any change under `web/` (or manually re-run the workflow from
+   the Actions tab). The job installs `@wix/cli`, logs in with the key,
+   and runs `wix release`.
+
+### Manual redeploy
+
+**Actions** tab → *Deploy web/ to Wix Headless* → **Run workflow**.
+
+### Rotating the key
+
+Revoke the old key at the Wix API Keys page and update the GitHub
+secret; the next push uses the new one automatically.
+
+### Deploying from a laptop instead
+
+If you'd rather run the CLI locally instead of through CI:
 
 ```bash
-# One-time on this machine:
-npm i -g @wix/cli
-npx wix login
-
-# Every deploy:
+npm install -g @wix/cli   # or use npx below
 cd web
-npx wix preview   # local preview at http://localhost:5173 (or similar)
-npx wix release   # ships to the live URL above
+npx -y @wix/cli login     # opens a browser; or --api-key "..."
+npx -y @wix/cli release
 ```
-
-`npx wix release` bundles this folder and updates the same live site —
-no new URL, no importer.
 
 ## What's next
 
