@@ -58,6 +58,17 @@ jobs:
         working-directory: web
         run: npx -y @wix/cli whoami
 
+      - name: Stage static site into dist (build output)
+        working-directory: web
+        run: |
+          rm -rf dist
+          mkdir -p dist
+          find . -mindepth 1 -maxdepth 1 \
+            ! -name dist ! -name wix.config.json ! -name README.md \
+            -exec cp -r {} dist/ \;
+          echo "dist contents:"
+          find dist -type f | sort
+
       - name: Release
         working-directory: web
         env:
