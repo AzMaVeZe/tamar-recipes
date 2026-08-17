@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+web/.wix/
+web/node_modules/
+web/package-lock.json
+web/dist/
