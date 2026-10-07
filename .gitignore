@@ -5,3 +5,6 @@ web/.wix/
 web/node_modules/
 web/package-lock.json
 web/dist/
+
+# Private project notes — do not publish to the public repo
+SERVICES.md
