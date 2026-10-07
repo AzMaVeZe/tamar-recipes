@@ -5,6 +5,8 @@ on:
     branches: [main, claude/migrate-site-to-wix-ghfd1a]
     paths:
       - 'web/**'
+      - 'data/**'
+      - 'tools/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
 
@@ -29,6 +31,9 @@ jobs:
     steps:
       - name: Check out repo
         uses: actions/checkout@v4
+
+      - name: Build site from data/
+        run: python3 tools/build.py
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

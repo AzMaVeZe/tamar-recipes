@@ -1,243 +1,46 @@
-<!DOCTYPE html><html dir="rtl" lang="he"><head>
-
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>המתכונים של תמר</title>
-<style>body{margin:0;font-family:'Assistant',sans-serif;color:#2A241B;background:#F6EEDC}a{color:#5C4472}a:hover{color:#B8432E}</style><link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;500;600;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-</head><body>
-<div style="position:relative;min-height:100vh;overflow:hidden">
-<div style="position:fixed;inset:-24px;z-index:0;background:url('images/bg-recipe-card-2.jpg') center/cover;filter:blur(14px) saturate(1.05)"></div>
-<div style="position:fixed;inset:0;z-index:0;background:rgba(246,238,220,.82)"></div>
-<div style="position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden"><img src="images/rina-chocolate.jpg" alt="" style="position:absolute;top:4%;right:-40px;width:200px;height:150px;object-fit:cover;transform:rotate(8deg);opacity:.55;filter:blur(1px);border-radius:4px;box-shadow:2px 3px 0 rgba(42,36,27,.12);border:1px solid rgba(74,64,51,.16)"><img src="images/tartlets.jpg" alt="" style="position:absolute;top:30%;right:-60px;width:180px;height:220px;object-fit:cover;transform:rotate(-7deg);opacity:.55;filter:blur(1px);border-radius:4px;box-shadow:2px 3px 0 rgba(42,36,27,.12);border:1px solid rgba(74,64,51,.16)"><img src="images/boyikos.jpg" alt="" style="position:absolute;top:62%;right:-30px;width:210px;height:140px;object-fit:cover;transform:rotate(5deg);opacity:.55;filter:blur(1px);border-radius:4px;box-shadow:2px 3px 0 rgba(42,36,27,.12);border:1px solid rgba(74,64,51,.16)"><img src="images/caramel-pie.jpg" alt="" style="position:absolute;top:12%;left:-50px;width:190px;height:230px;object-fit:cover;transform:rotate(-9deg);opacity:.55;filter:blur(1px);border-radius:4px;box-shadow:2px 3px 0 rgba(42,36,27,.12);border:1px solid rgba(74,64,51,.16)"><img src="images/heli-meatballs.jpg" alt="" style="position:absolute;top:48%;left:-70px;width:230px;height:150px;object-fit:cover;transform:rotate(6deg);opacity:.55;filter:blur(1px);border-radius:4px;box-shadow:2px 3px 0 rgba(42,36,27,.12);border:1px solid rgba(74,64,51,.16)"><img src="images/lemon-cookies.jpg" alt="" style="position:absolute;top:78%;left:-30px;width:180px;height:150px;object-fit:cover;transform:rotate(-5deg);opacity:.55;filter:blur(1px);border-radius:4px;box-shadow:2px 3px 0 rgba(42,36,27,.12);border:1px solid rgba(74,64,51,.16)"></div>
-<div style="position:relative;z-index:1">
-<header style="background:rgba(251,248,241,.92);border-bottom:1px solid rgba(74,64,51,.16)"><div style="max-width:1080px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:20px">
-<span style="font-family:'Suez One',serif;font-size:26px">המתכונים של תמר</span>
-<nav style="display:flex;gap:16px;font-weight:600;color:#5C4472"><a href="recipes.html" style="color:inherit;text-decoration:none">מתכונים</a><a href="categories.html" style="color:inherit;text-decoration:none">קטגוריות</a><a href="about.html" style="color:inherit;text-decoration:none">אודות</a></nav>
-<div style="flex:1"></div>
-<a href="add-recipe.html" style="background:#6E5591;color:#FBF8F1;font-weight:600;padding:10px 18px;border-radius:12px" style="color:inherit;text-decoration:none">הוספת מתכון</a>
-</div></header>
-<main style="max-width:1080px;margin:0 auto;padding:0 24px 64px">
-<section style="text-align:center;padding:56px 0 36px">
-<h1 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:56px;line-height:1.15">מה מבשלים היום?</h1>
-<div style="font-family:'Amatic SC',cursive;font-size:34px;color:#3C4C6E;margin-top:8px">מתכוני המשפחה — מהקלסר, מהפתקים ומהלב</div>
-</section>
-<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
-<button type="button" class="chip" data-filter="all" aria-pressed="true" style="cursor:pointer;font-family:'Assistant',sans-serif;font-size:14px;padding:6px 14px;border-radius:999px;background:#6E5591;color:#FBF8F1;font-weight:500;border:1px solid #6E5591">הכל</button>
-<button type="button" class="chip" data-filter="עוגות" aria-pressed="false" style="cursor:pointer;font-family:'Assistant',sans-serif;font-size:14px;padding:6px 14px;border-radius:999px;background:#FBF8F1;color:#4A4033;border:1px solid rgba(74,64,51,.32);font-weight:400">עוגות</button>
-<button type="button" class="chip" data-filter="עוגיות" aria-pressed="false" style="cursor:pointer;font-family:'Assistant',sans-serif;font-size:14px;padding:6px 14px;border-radius:999px;background:#FBF8F1;color:#4A4033;border:1px solid rgba(74,64,51,.32);font-weight:400">עוגיות</button>
-<button type="button" class="chip" data-filter="מאפים" aria-pressed="false" style="cursor:pointer;font-family:'Assistant',sans-serif;font-size:14px;padding:6px 14px;border-radius:999px;background:#FBF8F1;color:#4A4033;border:1px solid rgba(74,64,51,.32);font-weight:400">מאפים</button>
-<button type="button" class="chip" data-filter="בשרי" aria-pressed="false" style="cursor:pointer;font-family:'Assistant',sans-serif;font-size:14px;padding:6px 14px;border-radius:999px;background:#FBF8F1;color:#4A4033;border:1px solid rgba(74,64,51,.32);font-weight:400">בשרי</button>
-<button type="button" class="chip" data-filter="תוספות" aria-pressed="false" style="cursor:pointer;font-family:'Assistant',sans-serif;font-size:14px;padding:6px 14px;border-radius:999px;background:#FBF8F1;color:#4A4033;border:1px solid rgba(74,64,51,.32);font-weight:400">תוספות</button>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>המתכונים של תמר</title>
+<meta name="description" content="המתכונים של תמר: מתכוני משפחה מהפנקס, מהקלסר ומהפתקים הצהובים. עוגות, פאים, מאפים, מנות עיקריות ותוספות, עם הסריקה של המתכון המקורי.">
+<link rel="canonical" href="https://azmaveze.github.io/tamar-recipes/">
+<meta name="theme-color" content="#6E5591">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="המתכונים של תמר">
+<meta property="og:title" content="המתכונים של תמר">
+<meta property="og:description" content="המתכונים של תמר: מתכוני משפחה מהפנקס, מהקלסר ומהפתקים הצהובים. עוגות, פאים, מאפים, מנות עיקריות ותוספות, עם הסריקה של המתכון המקורי.">
+<meta property="og:url" content="https://azmaveze.github.io/tamar-recipes/">
+<meta property="og:image" content="https://azmaveze.github.io/tamar-recipes/images/keren-cheesecake.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;500;600;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">דלגו לתוכן</a><header class="site-header"><div class="wrap"><a class="brand" href="./">המתכונים של תמר</a><nav class="site-nav" aria-label="ראשי"><a href="recipes.html">מתכונים</a><a href="categories.html">קטגוריות</a><a href="about.html">אודות</a></nav><a class="cta" href="add-recipe.html">＋ הוספת מתכון</a></div></header>
+<div class="bg-photo" style="background-image:url('images/keren-cheesecake.jpg')" aria-hidden="true"></div>
+<div class="bg-veil" aria-hidden="true"></div>
+<div class="scatter" aria-hidden="true"><img src="images/rina-chocolate.jpg" alt="" loading="lazy" style="top:340px;right:-40px;width:200px;height:150px;transform:rotate(8deg)"><img src="images/tartlets.jpg" alt="" loading="lazy" style="top:900px;right:-60px;width:180px;height:220px;transform:rotate(-7deg)"><img src="images/boyikos.jpg" alt="" loading="lazy" style="top:1700px;right:-30px;width:210px;height:140px;transform:rotate(5deg)"><img src="images/caramel-pie.jpg" alt="" loading="lazy" style="top:520px;left:-50px;width:190px;height:230px;transform:rotate(-9deg)"><img src="images/heli-meatballs.jpg" alt="" loading="lazy" style="top:1300px;left:-70px;width:230px;height:150px;transform:rotate(6deg)"><img src="images/lemon-cookies.jpg" alt="" loading="lazy" style="top:2100px;left:-30px;width:180px;height:150px;transform:rotate(-5deg)"></div>
+<main id="main">
+<section class="hero wrap">
+<h1>מה מבשלים היום?</h1>
+<p class="kicker">מתכוני המשפחה — מהקלסר, מהפתקים ומהלב</p>
+<div class="surprise">
+<button type="button" class="btn btn-accent" data-surprise>🎲 תפתיעו אותי</button>
+<p class="surprise-out" data-surprise-out></p>
 </div>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px"><a data-cat="בשרי" href="recipes/recipe-01.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/shepherds-pie.jpg" alt="פאי רועים" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">פאי רועים</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— של אמא</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#F6DFD7;color:#B8432E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">בשרי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>60 דקות</span><span>·</span><span>6 מנות</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-02.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/caramel-pie.jpg" alt="פאי פיצוחים בקרמל" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">פאי פיצוחים בקרמל</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהקלסר של תמר</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>50 דקות</span><span>·</span><span>תבנית 4 ס"מ</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-03.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/cheese-brownies.jpg" alt="עוגת גבינה בראוניז" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">עוגת גבינה בראוניז</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— דבי יעל</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>תבנית מלבנית</span></div>
-</div></a>
-<a data-cat="מאפים" href="recipes/recipe-04.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/boyikos.jpg" alt="בואיקוס בולגריים קלים" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">בואיקוס בולגריים קלים</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהמשפחה</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">30-35 יחידות</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>40 דקות</span><span>·</span><span>35 יחידות</span></div>
-</div></a>
-<a data-cat="בשרי" href="recipes/recipe-05.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/wellington.jpg" alt="ביף וולינגטון" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">ביף וולינגטון</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— גורדון רמזי</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#F6DFD7;color:#B8432E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">בשרי</span><span style="background:#F7EBC8;color:#8A6510;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חגיגי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעתיים</span><span>·</span><span>3 מנות</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-06.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/rina-chocolate.jpg" alt="עוגת השוקולד של רינה" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">עוגת השוקולד של רינה</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— שאביטל מכינה כל שבת, וגם תמר. ורבה וגם טעים!</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">קלה</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>45 דקות</span><span>·</span><span>תבנית קפיצית</span></div>
-</div></a>
-<a data-cat="עוגיות" href="recipes/recipe-07.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/speculaas.jpg" alt="עוגיות ספקולאס" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">עוגיות ספקולאס</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהקלסר של תמר</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">מתובל</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>40 דקות</span><span>·</span><span>תבנית עוגיות</span></div>
-</div></a>
-<a data-cat="מאפים" href="recipes/recipe-08.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/focaccia.jpg" alt="פוקאצ׳ה קלאסית עם שום ורוזמרין" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">פוקאצ׳ה קלאסית עם שום ורוזמרין</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— גזיר עיתון, 2018</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">לחם</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעתיים וחצי</span><span>·</span><span>תבנית 30x20</span></div>
-</div></a>
-<a data-cat="בשרי" href="recipes/recipe-09.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/rice-bharat.jpg" alt="אורז עם בשר טחון ובהרט" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">אורז עם בשר טחון ובהרט</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— דנה אלמוסני, מהעיתון</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#F6DFD7;color:#B8432E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">בשרי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">סיר אחד</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>6 מנות</span></div>
-</div></a>
-<a data-cat="תוספות" href="recipes/recipe-10.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/cucumber-salad.jpg" alt="סלט מלפפונים" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">סלט מלפפונים</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— חמוץ-מתוק</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">טרי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>10 דקות</span><span>·</span><span>תוספת לשולחן</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-11.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/nougat-tartlet.jpg" alt="טארטלט שוקולד נוגט" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">טארטלט שוקולד נוגט</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— חני פיין</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">מושקע</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה וחצי</span><span>·</span><span>טארט + טארטלטים קטנים</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-12.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/tartlets.jpg" alt="טארטלט פסיפלורה" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">טארטלט פסיפלורה</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— חני פיין</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פירותי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>טארטלטים</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-13.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/tartlets.jpg" alt="טארטלט שקדים פרנג׳יפאן" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">טארטלט שקדים פרנג׳יפאן</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— חני פיין</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>טארטלטים</span></div>
-</div></a>
-<a data-cat="בשרי" href="recipes/recipe-14.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/chicken-rolls.jpg" alt="גלילות חזה עוף ברוטב פלפלים" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">גלילות חזה עוף ברוטב פלפלים</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהקלסר</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#F6DFD7;color:#B8432E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">בשרי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה וחצי</span><span>·</span><span>תבנית גדולה</span></div>
-</div></a>
-<a data-cat="בשרי" href="recipes/recipe-15.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/avital-meatballs.jpg" alt="קציצות בשר ברוטב מתקתק" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">קציצות בשר ברוטב מתקתק</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהספר של אביטל</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#F6DFD7;color:#B8432E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">בשרי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה וחצי</span><span>·</span><span>סיר גדול</span></div>
-</div></a>
-<a data-cat="בשרי" href="recipes/recipe-16.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/heli-meatballs.jpg" alt="הקציצות של חלי לופצ׳י" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">הקציצות של חלי לופצ׳י</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— חלי לופצ׳י</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#F6DFD7;color:#B8432E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">בשרי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">מתובל</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>6 מנות</span></div>
-</div></a>
-<a data-cat="תוספות" href="recipes/recipe-17.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/shabbat-kugel.jpg" alt="הקוגל של כל שבת" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">הקוגל של כל שבת</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— בס"ד, מהפנקס</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">שבת</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה וחצי</span><span>·</span><span>תבנית גדולה</span></div>
-</div></a>
-<a data-cat="עוגיות" href="recipes/recipe-18.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/lemon-cookies.jpg" alt="עוגיות לימון (שסמי אוהבת)" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">עוגיות לימון (שסמי אוהבת)</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— בשביל סמי</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעתיים וחצי</span><span>·</span><span>תבנית עוגיות</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-19.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/mississippi.jpg" alt="הבראוניז של מיסיסיפי" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">הבראוניז של מיסיסיפי</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהפתק הצהוב</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">שוקולדי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>תבנית מלבנית</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-20.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/tofu-cheesecake.jpg" alt="עוגת גבינה טופו" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">עוגת גבינה טופו</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— דבי יעל</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>תבנית קפיצית</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-21.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/keren-cheesecake.jpg" alt="עוגת גבינה פירורים אפויה" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">עוגת גבינה פירורים אפויה</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— קרן גורן</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#EBE3F2;color:#5C4472;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">חלבי</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">קלאסיקה</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה וחצי</span><span>·</span><span>תבנית גדולה</span></div>
-</div></a>
-<a data-cat="עוגות" href="recipes/recipe-22.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/ora-apple-pie.jpg" alt="פאי תפוחים של אורה" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">פאי תפוחים של אורה</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— של אורה</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span><span style="background:#EDDFC2;color:#4A4033;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פירותי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה וחצי</span><span>·</span><span>תבנית פאי</span></div>
-</div></a>
-<a data-cat="בשרי" href="recipes/recipe-23.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/stuffed-meatballs.jpg" alt="קציצות ממולאות" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">קציצות ממולאות</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהפנקס הישן (כתב יד קשה...)</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#F6DFD7;color:#B8432E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">בשרי</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>שעה</span><span>·</span><span>סיר</span></div>
-</div></a>
-<a data-cat="תוספות" href="recipes/recipe-24.html" style="background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08);display:block;text-decoration:none;color:inherit">
-<div style="height:10px;background-color:#6E5591;background-image:radial-gradient(rgba(92,68,114,.5) 1.3px,transparent 1.3px);background-size:12px 12px"></div>
-<div style="padding:24px"><div style="height:150px;margin:-24px -24px 16px;overflow:hidden"><img src="images/apple-cake.jpg" alt="קוגל תפוחי עץ" style="width:100%;height:100%;object-fit:cover;display:block"></div>
-<h3 style="margin:0;font-family:'Suez One',serif;font-weight:400;font-size:21px;color:#2A241B">קוגל תפוחי עץ</h3>
-<div style="font-family:'Amatic SC',cursive;font-size:26px;color:#3C4C6E;margin-top:2px">— מהפנקס הישן</div>
-<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px"><span style="background:#E4EBD9;color:#4F6B3E;font-weight:600;font-size:13px;padding:3px 10px;border-radius:999px">פרווה</span></div>
-<div style="display:flex;gap:14px;margin-top:12px;font-size:15px;color:#6E6252"><span>50 דקות</span><span>·</span><span>8 מנות</span></div>
-</div></a></div></div>
-<script>
-(function(){
-  var chips=[].slice.call(document.querySelectorAll('.chip'));
-  var cards=[].slice.call(document.querySelectorAll('[data-cat]'));
-  function set(btn){
-    chips.forEach(function(c){
-      var on=c===btn;
-      c.style.background=on?'#6E5591':'#FBF8F1';
-      c.style.color=on?'#FBF8F1':'#4A4033';
-      c.style.border=on?'1px solid #6E5591':'1px solid rgba(74,64,51,.32)';
-      c.style.fontWeight=on?'500':'400';
-      c.setAttribute('aria-pressed',on?'true':'false');
-    });
-    var f=btn.getAttribute('data-filter');
-    cards.forEach(function(card){
-      card.style.display=(f==='all'||card.getAttribute('data-cat')===f)?'':'none';
-    });
-  }
-  chips.forEach(function(c){c.addEventListener('click',function(){set(c);});});
-})();
-</script>
-</body></html>
+</section>
+<section class="wrap" aria-labelledby="all-h">
+<h2 id="all-h" class="sr-only">כל המתכונים</h2>
+<div class="tools"><div class="chips center" role="group" aria-label="סינון לפי קטגוריה"><button type="button" class="chip" data-filter="all" aria-pressed="true">הכל<span class="n">23</span></button><button type="button" class="chip" data-filter="cakes" aria-pressed="false">עוגות<span class="n">5</span></button><button type="button" class="chip" data-filter="pies" aria-pressed="false">פאים וטארטים<span class="n">5</span></button><button type="button" class="chip" data-filter="cookies" aria-pressed="false">עוגיות<span class="n">2</span></button><button type="button" class="chip" data-filter="bakes" aria-pressed="false">מאפים<span class="n">2</span></button><button type="button" class="chip" data-filter="mains" aria-pressed="false">מנות עיקריות<span class="n">7</span></button><button type="button" class="chip" data-filter="sides" aria-pressed="false">תוספות וסלטים<span class="n">2</span></button></div><p class="result-count" data-count role="status" aria-live="polite" style="text-align:center"></p></div>
+<div class="grid" data-grid><a class="card" href="recipes/recipe-01.html" data-id="recipe-01" data-cat="mains" data-search="פאי רועים של אמא מנות עיקריות בשרי קילו וחצי תפוחי אדמה קלופים וחתוכים לקוביות כף גדושה מזולה על בסיס שמן זית 3 כפות שמן זית 3 בצלים גדולים קלופים וקצוצים חצי קילו בשר טחון טחינה אחת 2 שיני שום קצוצות כף צנוברים מלח גס פלפל גרוס קמצוץ בהרט 3 כפות רסק עגבניות או קטשופ אם אין רסק אופציה קופסת כרוב כבוש מסונן"><img class="thumb" src="images/shepherds-pie.jpg" alt="" width="400" height="300"><div class="body"><h3>פאי רועים</h3><p class="sub">— של אמא</p><div class="badges"><span class="badge k-meat">בשרי</span></div><div class="meta">שעה · 6 מנות</div></div></a><a class="card" href="recipes/recipe-02.html" data-id="recipe-02" data-cat="pies" data-search="פאי פיצוחים בקרמל מהקלסר של תמר פאים וטארטים פרווה 100 גר אבקת סוכר 200 גר חמאה או מרגרינה חתוכה לקוביות 300 גר קמח 1 ביצה 1 כוס סוכר 3/4 כוס שמנת מתוקה או קצפת פרווה שקדים שלמים קשיו שלם פיסטוק קלוף חמוציות וכו"><img class="thumb" src="images/caramel-pie.jpg" alt="" width="400" height="300"><div class="body"><h3>פאי פיצוחים בקרמל</h3><p class="sub">— מהקלסר של תמר</p><div class="badges"><span class="badge k-parve">פרווה</span></div><div class="meta">50 דקות · תבנית 4 ס&quot;מ</div></div></a><a class="card" href="recipes/recipe-03.html" data-id="recipe-03" data-cat="cakes" data-search="עוגת גבינה בראוניז דבי יעל עוגות חלבי 500גרם גבינת שמנת 30% שומן בטמפ החדר 500גרם גבינה לבנה 5% שומן בטמפ החדר 200גרם חמאה מומסת 1 5כוס סוכר 300 גרם 2כפיות תמצית וניל 6 ביצים 2כף קורנפלור 20 גרם 300גרם שוקולד מריר 200גרם חמאה 4ביצים 1כוס סוכר 200 גרם 1כוס דחוסה סוכר חום כהה 240 גרם 1 1/4כוסות קמח 180 גרם 1כפית אבקת אפייה 1/2כפית מלח 1כוס אגוזי מלך שבורים 100 גרם"><img class="thumb" src="images/cheese-brownies.jpg" alt="" width="400" height="300"><div class="body"><h3>עוגת גבינה בראוניז</h3><p class="sub">— דבי יעל</p><div class="badges"><span class="badge k-dairy">חלבי</span></div><div class="meta">שעה · תבנית מלבנית</div></div></a><a class="card" href="recipes/recipe-04.html" data-id="recipe-04" data-cat="bakes" data-search="בואיקוס בולגריים קלים מהמשפחה מאפים חלבי 3 כוסות 420 גרם קמח תופח 3 כוסות גבינות מלוחות וצהובות מעורבבות מגוררות דק הכוללות גם גבינה בולגרית או פטה וגם גבינה צהובה בעלת חריפות מסוימת כמו קשקבל או צדר 1 מכל 250 מל שמנת מתוקה 200 גרם חמאה רכה חתוכה לקוביות גדולות מלח לפי הטעם תלוי במידת המליחות של הגבינה הבולגרית או הפטה שהוספתם כדאי לטעום ביצה טרופה זרעוני שומשום או קצח"><img class="thumb" src="images/boyikos.jpg" alt="" width="400" height="300"><div class="body"><h3>בואיקוס בולגריים קלים</h3><p class="sub">— מהמשפחה</p><div class="badges"><span class="badge k-dairy">חלבי</span></div><div class="meta">40 דקות · 30-35 יחידות</div></div></a><a class="card" href="recipes/recipe-05.html" data-id="recipe-05" data-cat="mains" data-search="ביף וולינגטון גורדון רמזי מנות עיקריות בשרי חגיגי 400גרם פילה בקר בחתיכה אחת 400גרם פטריות שן שום מעוכה ענף תימין 4פרוסות של חזה אווז מעושן חרדל 200גרם בצק עלים מופשר 2חלמונים טרופים מלח פלפל שחור שמן זית"><img class="thumb" src="images/wellington.jpg" alt="" width="400" height="300"><div class="body"><h3>ביף וולינגטון</h3><p class="sub">— גורדון רמזי</p><div class="badges"><span class="badge k-meat">בשרי</span><span class="badge t-festive">חגיגי</span></div><div class="meta">שעתיים · 3 מנות</div></div></a><a class="card" href="recipes/recipe-06.html" data-id="recipe-06" data-cat="cakes" data-search="עוגת השוקולד של רינה אביטל מכינה אותה כל שבת וגם תמר עוגות פרווה קלה 4 כפות קקאו 2 כוסות סוכר אני שמה כמובן פחות שקית אבקת אפיה 1/2 כפית סודה לשתיה 2 ביצים 1 כוס מים 1 כוס שמן 1 כוס 25 כוסות קמח"><img class="thumb" src="images/rina-chocolate.jpg" alt="" width="400" height="300"><div class="body"><h3>עוגת השוקולד של רינה</h3><p class="sub">— אביטל מכינה אותה כל שבת, וגם תמר</p><div class="badges"><span class="badge k-parve">פרווה</span><span class="badge ">קלה</span></div><div class="meta">45 דקות · תבנית קפיצית</div></div></a><a class="card" href="recipes/recipe-07.html" data-id="recipe-07" data-cat="cookies" data-search="עוגיות ספקולאס מהקלסר של תמר עוגיות חלבי מתובל 150 גר 1 כוס דחוסה סוכר חום כהה ¼ כוס סוכר לבן 3 כפות סירופ ביתי 250 גרם קמח תופח 2 כוסות 3 כפות קורט מלח ½ כפית שטוחה קינמון זנגביל ציפורן ¼ פלפל 75 גר חמאה 4 6 כפות חלב"><img class="thumb" src="images/speculaas.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>עוגיות ספקולאס</h3><p class="sub">— מהקלסר של תמר</p><div class="badges"><span class="badge k-dairy">חלבי</span><span class="badge ">מתובל</span></div><div class="meta">40 דקות · תבנית עוגיות</div></div></a><a class="card" href="recipes/recipe-08.html" data-id="recipe-08" data-cat="bakes" data-search="פוקאצה קלאסית עם שום ורוזמרין גזיר עיתון 2018 מאפים פרווה לחם 5½ כוסות 800 גרם קמח רגיל ניתן להמיר חצי מהכמות בקמח כוסמין לבן 2 כפיות שמרים יבשים 2 כפיות סוכר ½ כוס שמן זית 1½ כוסות מים 2 כפיות מלח 4 5 שיני שום פרוסות 20 מחטי רוזמרין ¼ כוס שמן זית ¼ כוס מים ½ כפית מלח"><img class="thumb" src="images/focaccia.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>פוקאצ׳ה קלאסית עם שום ורוזמרין</h3><p class="sub">— גזיר עיתון, 2018</p><div class="badges"><span class="badge k-parve">פרווה</span><span class="badge ">לחם</span></div><div class="meta">שעתיים וחצי · תבנית 30x20</div></div></a><a class="card" href="recipes/recipe-09.html" data-id="recipe-09" data-cat="mains" data-search="אורז עם בשר טחון ובהרט דנה אלמוסני מנות עיקריות בשרי סיר אחד 3 כפות שמן 2 בצלים קצוצים דק 2 3 גזרים מגורדים גס 500 גרם בשר בקר טחון אפשר לבקש מהקצב להוסיף לו מעט שומן כבש 2 מנות אורז פרסי אפשר גם בסמטי 3 שיני שום קצוצות 2 כפות פטרוזיליה קצוצה 1 כף שמיר קצוץ לא חובה כפית בהרט מלח ופלפל שחור"><img class="thumb" src="images/rice-bharat.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>אורז עם בשר טחון ובהרט</h3><p class="sub">— דנה אלמוסני</p><div class="badges"><span class="badge k-meat">בשרי</span><span class="badge ">סיר אחד</span></div><div class="meta">שעה · 6 מנות</div></div></a><a class="card" href="recipes/recipe-10.html" data-id="recipe-10" data-cat="sides" data-search="סלט מלפפונים מהמשפחה תוספות וסלטים פרווה טרי חמוץ מתוק חמישה מלפפונים מקולפים ופרוסים דק בצל לבן מקולף חתוך לחצי ופרוס דק לחצאי טבעות לימון שטוף שתי כפות חומץ שלוש כפות שמן חמניות חצי כפית סוכר כמו שהציעה ריקי מלח מעט כוסברה או פטרוזיליה או שמיר"><img class="thumb" src="images/cucumber-salad.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>סלט מלפפונים</h3><p class="sub">— מהמשפחה</p><div class="badges"><span class="badge k-parve">פרווה</span><span class="badge ">טרי</span><span class="badge ">חמוץ-מתוק</span></div><div class="meta">10 דקות · תוספת לשולחן</div></div></a><a class="card" href="recipes/recipe-11.html" data-id="recipe-11" data-cat="pies" data-search="טארטלט שוקולד נוגט חני פיין פאים וטארטים חלבי מושקע 300 גר חמאה או מרגרינה 60 גר שקדים טחונים 190 גר אבקת סוכר 120 גר ביצים 500 גר קמח חצי מקל וניל 50 מל שמנת מתוקה 70 גר קרם נוגט 150 גר שוקולד מריר 2 חלמונים 40 גר חמאה 120 גר שוקולד מריר 150 מל שמנת מתוקה 3 כפות קרם נוגט 25 גר חמאה 30 מל ליקר שוקולד"><img class="thumb" src="images/nougat-tartlet.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>טארטלט שוקולד נוגט</h3><p class="sub">— חני פיין</p><div class="badges"><span class="badge k-dairy">חלבי</span><span class="badge ">מושקע</span></div><div class="meta">שעה וחצי · טארט + טארטלטים קטנים</div></div></a><a class="card" href="recipes/recipe-12.html" data-id="recipe-12" data-cat="pies" data-search="טארטלט פסיפלורה חני פיין פאים וטארטים חלבי פירותי 150 גר מחית פסיפלורה 100 מל מים 1 ביצה 20 גר קורנפלור 10 גר פודינג וניל 50 גר סוכר 30 גר חמאה 160 מל שמנת מתוקה + 2 כפות אבקת סוכר 90 מל מחית פסיפלורה 150 גר שוקולד לבן חלבי"><img class="thumb" src="images/tartlets.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>טארטלט פסיפלורה</h3><p class="sub">— חני פיין</p><div class="badges"><span class="badge k-dairy">חלבי</span><span class="badge ">פירותי</span></div><div class="meta">שעה · טארטלטים</div></div></a><a class="card" href="recipes/recipe-13.html" data-id="recipe-13" data-cat="pies" data-search="טארטלט שקדים פרנגיפאן חני פיין פאים וטארטים חלבי 190 מל חלב או מים 45 גר חלמונים 20 גר קורנפלור 10 גר פודינג וניל 100 גר חמאה 100 גר אבקת סוכר 100 גר שקדים טחונים 1 חלמון 10 גר קורנפלור פרוסות אפרסקים או אגסים מקופסת שימורים"><img class="thumb" src="images/tartlets.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>טארטלט שקדים פרנג׳יפאן</h3><p class="sub">— חני פיין</p><div class="badges"><span class="badge k-dairy">חלבי</span></div><div class="meta">שעה · טארטלטים</div></div></a><a class="card" href="recipes/recipe-14.html" data-id="recipe-14" data-cat="mains" data-search="גלילות חזה עוף ברוטב פלפלים מהקלסר של תמר מנות עיקריות בשרי חזות עוף פירורי לחם ביצים פלפלים מכל הצבעים 4 כפות קטשופ 4 כפות סוכר חום 3 כפות חומץ 2 כפות רוטב סויה 3/4 כוס מרק עוף אפשר מאבקה ביחס של כף אבקת מרק עוף + כמעט 3/4 כוס מים 1 כפית קורנפלור"><img class="thumb" src="images/chicken-rolls.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>גלילות חזה עוף ברוטב פלפלים</h3><p class="sub">— מהקלסר של תמר</p><div class="badges"><span class="badge k-meat">בשרי</span></div><div class="meta">שעה וחצי · תבנית גדולה</div></div></a><a class="card" href="recipes/recipe-15.html" data-id="recipe-15" data-cat="mains" data-search="קציצות בשר ברוטב מתקתק מהספר של אביטל מנות עיקריות בשרי 1 כרוב ברצועות 1/3 כוס אורז לא מבושל 1 כוס קטשופ 250 גר רסק עגבניות 1/2 כוס סוכר חום/לבן/ריבה מיץ מחצי לימון 1/4 כפית מלח 3 4 כוסות מים 1 קג בשר 2 ביצים גדולות בצל קצוץ 2/3 כוס פרורי לחם 2 שיני שום כתוש מלח"><img class="thumb" src="images/avital-meatballs.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>קציצות בשר ברוטב מתקתק</h3><p class="sub">— מהספר של אביטל</p><div class="badges"><span class="badge k-meat">בשרי</span></div><div class="meta">שעה וחצי · סיר גדול</div></div></a><a class="card" href="recipes/recipe-16.html" data-id="recipe-16" data-cat="mains" data-search="הקציצות של חלי לופצי חלי מנות עיקריות בשרי מתובל 600 גר בקר 1 בצל מגורד 1 תפא מגורד ביצה כוס פירורי לחם כוס עלי פטרוזיליה 1 כפית גדושה בהרט קינמון אגוז מוסקט פלפל מלח 1 פלפל ירוק אדום צהוב 6 שיני שום פרוסות 4 כפות רוטב סויה 1/2 כוס רוטב צילי"><img class="thumb" src="images/heli-meatballs.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>הקציצות של חלי לופצ׳י</h3><p class="sub">— חלי</p><div class="badges"><span class="badge k-meat">בשרי</span><span class="badge ">מתובל</span></div><div class="meta">שעה · 6 מנות</div></div></a><a class="card" href="recipes/recipe-17.html" data-id="recipe-17" data-cat="sides" data-search="הקוגל של כל שבת מהפנקס תוספות וסלטים פרווה שבת 2 קילו תפוחי אדמה + בצל 5/6 ביצים 2 כוסות מים רותחים 1/2 כשמן מלפ"><img class="thumb" src="images/shabbat-kugel.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>הקוגל של כל שבת</h3><p class="sub">— מהפנקס</p><div class="badges"><span class="badge k-parve">פרווה</span><span class="badge ">שבת</span></div><div class="meta">שעה וחצי · תבנית גדולה</div></div></a><a class="card" href="recipes/recipe-18.html" data-id="recipe-18" data-cat="cookies" data-search="עוגיות לימון שסמי אוהבת עוגיות פרווה 200 גר מרגרינה 1/2 כוס סוכר 3 כפות מים 3 כפות מיץ לימון 3 כוסות קמח 1 שקית אבקת אפיה"><img class="thumb" src="images/lemon-cookies.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>עוגיות לימון</h3><p class="sub">— שסמי אוהבת</p><div class="badges"><span class="badge k-parve">פרווה</span></div><div class="meta">שעתיים וחצי · תבנית עוגיות</div></div></a><a class="card" href="recipes/recipe-20.html" data-id="recipe-20" data-cat="cakes" data-search="עוגת גבינה טופו דבי יעל עוגות חלבי כוס וחצי פירורי ביסקויטים +3 כפות מרגרינה +2 כפות 450 גר שמנת 450 גר גבינה 4 ביצים כוס סוכר כפית תמצית וניל"><img class="thumb" src="images/tofu-cheesecake.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>עוגת גבינה טופו</h3><p class="sub">— דבי יעל</p><div class="badges"><span class="badge k-dairy">חלבי</span></div><div class="meta">שעה · תבנית קפיצית</div></div></a><a class="card" href="recipes/recipe-21.html" data-id="recipe-21" data-cat="cakes" data-search="עוגת גבינה פירורים אפויה קרן גורן עוגות חלבי קלאסיקה 2 1/2 כוסות קמח תופח 200 גר חמאה 1 ביצה 1/4 כוס סוכר 2/3 750 גר גבינה לבנה 1 שמנת חמוצה 1 1/4 כוסות סוכר קליפה מגוררת לימון 1 פודינג וניל 1 1/2 כפות קורנפלור 4 ביצים"><img class="thumb" src="images/keren-cheesecake.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>עוגת גבינה פירורים אפויה</h3><p class="sub">— קרן גורן</p><div class="badges"><span class="badge k-dairy">חלבי</span><span class="badge ">קלאסיקה</span></div><div class="meta">שעה וחצי · תבנית גדולה</div></div></a><a class="card" href="recipes/recipe-22.html" data-id="recipe-22" data-cat="pies" data-search="פאי תפוחים של אורה אורה פאים וטארטים פרווה פירותי 2 כוס קמח 1 כפית א אפיה 4 כפות סוכר קורט מלח 150 גר חמאה 4 6 כפות מי קרח 5 תפו גרנד סמית 1 כף מיץ לימון 3/4 כוס סוכר 1 כף קמח 1 כפית קינמון 25 גר מרגרינה"><img class="thumb" src="images/ora-apple-pie.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>פאי תפוחים של אורה</h3><p class="sub">— אורה</p><div class="badges"><span class="badge k-parve">פרווה</span><span class="badge ">פירותי</span></div><div class="meta">שעה וחצי · תבנית פאי</div></div></a><a class="card" href="recipes/recipe-23.html" data-id="recipe-23" data-cat="mains" data-search="קציצות ממולאות מהפנקס הישן · כתב היד קשה לפענוח מנות עיקריות בשרי 40 בקר 1 בצל גדול 3 שיני שום 2 ביצים 2 כפות פירורי לחם 3 שמן 1 כפית קינמון 1 כף סוכר מלח 3 פרוסים 1/2 כף 1/2 כוס מלח פ"><img class="thumb" src="images/stuffed-meatballs.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>קציצות ממולאות</h3><p class="sub">— מהפנקס הישן · כתב היד קשה לפענוח</p><div class="badges"><span class="badge k-meat">בשרי</span></div><div class="meta">שעה · סיר</div></div></a><a class="card" href="recipes/recipe-24.html" data-id="recipe-24" data-cat="cakes" data-search="קוגל תפוחי עץ מהפנקס הישן עוגות פרווה 8 גרנד כוס קמח 1/2 כוס סוכר 3/4 כוס שמן קנולה 3 ביצים 2 סוכר וניל כפית א אפיה ריבת משמש קינמון"><img class="thumb" src="images/apple-cake.jpg" alt="" width="400" height="300" loading="lazy" decoding="async"><div class="body"><h3>קוגל תפוחי עץ</h3><p class="sub">— מהפנקס הישן</p><div class="badges"><span class="badge k-parve">פרווה</span></div><div class="meta">50 דקות · 8 מנות</div></div></a></div>
+<p class="empty" data-empty>לא מצאנו מתכון כזה. נסו מילה אחרת, או <a href="add-recipe.html">שלחו לנו אותו</a>.</p>
+</section>
+</main>
+<footer class="site-footer"><div class="wrap"><span>המתכונים של תמר · <span class="bete">בתיאבון!</span></span><nav aria-label="קישורים נוספים"><a href="about.html">אודות</a><a href="add-recipe.html">הוספת מתכון</a><a href="accessibility.html">הצהרת נגישות</a></nav></div></footer>
+</body>
+</html>

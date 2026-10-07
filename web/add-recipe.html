@@ -1,139 +1,75 @@
-<!DOCTYPE html><html dir="rtl" lang="he"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>הוספת מתכון — המתכונים של תמר</title>
-<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;500;600;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  body{margin:0;font-family:'Assistant',sans-serif;color:#2A241B;background:#F6EEDC;min-height:100vh;display:flex;flex-direction:column}
-  a{color:#5C4472;text-decoration:none} a:hover{color:#B8432E}
-  header{background:rgba(251,248,241,.92);border-bottom:1px solid rgba(74,64,51,.16);position:sticky;top:0;z-index:5}
-  header .row{max-width:1080px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-  header .brand{font-family:'Suez One',serif;font-size:26px;color:#2A241B}
-  header nav{display:flex;gap:16px;font-weight:600;color:#5C4472;margin-inline-start:auto}
-  main{flex:1;max-width:720px;margin:0 auto;padding:36px 24px;width:100%;box-sizing:border-box}
-  h1{font-family:'Suez One',serif;font-weight:400;font-size:34px;margin:0 0 4px;color:#2A241B}
-  .kicker{font-family:'Amatic SC',cursive;font-size:28px;color:#3C4C6E;margin-bottom:20px}
-  form{background:#FBF8F1;border:1px solid rgba(74,64,51,.16);border-radius:16px;padding:24px;box-shadow:0 1px 3px rgba(42,36,27,.08),0 4px 14px rgba(42,36,27,.08)}
-  .field{margin-bottom:16px}
-  label{display:block;font-weight:600;margin-bottom:6px;color:#4A4033}
-  label .req{color:#B8432E}
-  input,select,textarea{width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;padding:10px 12px;border-radius:10px;border:1px solid rgba(74,64,51,.3);background:#fff;color:#2A241B}
-  textarea{min-height:120px;resize:vertical}
-  .row2{display:flex;gap:14px;flex-wrap:wrap}
-  .row2 .field{flex:1;min-width:160px}
-  .hint{font-size:13px;color:#6E6252;margin-top:4px}
-  button{cursor:pointer;font-family:inherit;font-size:17px;font-weight:600;background:#6E5591;color:#FBF8F1;border:none;padding:12px 28px;border-radius:12px;margin-top:4px}
-  button:hover{background:#5C4472}
-  .note{background:#EBE3F2;border:1px solid rgba(110,85,145,.3);border-radius:12px;padding:14px 16px;font-size:15px;color:#4A4033;margin-bottom:20px}
-  #ok{display:none;background:#E4EBD9;border:1px solid #A9C08E;border-radius:12px;padding:18px;color:#3F5A2B;font-size:17px;text-align:center}
-  footer{border-top:1px solid rgba(74,64,51,.16);padding:24px;text-align:center;color:#6E6252;font-size:15px;background:rgba(251,248,241,.7);margin-top:40px}
-</style></head><body>
-<header><div class="row">
-  <a href="./" class="brand">המתכונים של תמר</a>
-  <nav><a href="recipes.html">מתכונים</a><a href="categories.html">קטגוריות</a><a href="about.html">אודות</a></nav>
-</div></header>
-<main>
-  <h1>הוספת מתכון</h1>
-  <div class="kicker">יש לכם מתכון משפחתי? שלחו אותו לתמר 🧡</div>
-
-  <div class="note">
-    המתכון נשלח <b>לאישור</b> — אחרי בדיקה קטנה הוא יתווסף לאתר. אפשר לצרף קישור
-    לתמונה, או לשלוח תמונה בהמשך במייל חוזר.
-  </div>
-
-  <div id="ok">✅ תודה! המתכון נשלח בהצלחה ויתווסף לאתר אחרי אישור.</div>
-
-  <!-- ⚙️ Formspree: replace FORMSPREE_ID below with the real form id (see setup notes). -->
-  <form id="recipeForm" action="https://formspree.io/f/FORMSPREE_ID" method="POST">
-    <div class="field">
-      <label>שם המתכון <span class="req">*</span></label>
-      <input type="text" name="שם המתכון" required placeholder="למשל: עוגת גבינה של סבתא">
-    </div>
-
-    <div class="row2">
-      <div class="field">
-        <label>קטגוריה</label>
-        <select name="קטגוריה">
-          <option>עוגות</option><option>עוגיות</option><option>מאפים</option>
-          <option>בשרי</option><option>תוספות</option>
-        </select>
-      </div>
-      <div class="field">
-        <label>כשרות</label>
-        <select name="כשרות">
-          <option>חלבי</option><option>פרווה</option><option>בשרי</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="row2">
-      <div class="field">
-        <label>זמן הכנה</label>
-        <input type="text" name="זמן הכנה" placeholder="למשל: שעה">
-      </div>
-      <div class="field">
-        <label>כמות / תבנית</label>
-        <input type="text" name="כמות" placeholder="למשל: תבנית מלבנית / 6 מנות">
-      </div>
-    </div>
-
-    <div class="field">
-      <label>של מי המתכון? (מקור)</label>
-      <input type="text" name="מקור" placeholder="למשל: מהקלסר של תמר / דבי יעל">
-    </div>
-
-    <div class="field">
-      <label>מצרכים <span class="req">*</span></label>
-      <textarea name="מצרכים" required placeholder="שורה לכל מצרך…"></textarea>
-    </div>
-
-    <div class="field">
-      <label>אופן ההכנה <span class="req">*</span></label>
-      <textarea name="אופן ההכנה" required placeholder="שלב אחרי שלב…"></textarea>
-    </div>
-
-    <div class="field">
-      <label>קישור לתמונה (אופציונלי)</label>
-      <input type="url" name="קישור לתמונה" placeholder="https://…">
-      <div class="hint">אין תמונה מקוונת? אפשר לשלוח אותה במייל חוזר אחרי השליחה.</div>
-    </div>
-
-    <div class="row2">
-      <div class="field">
-        <label>השם שלכם <span class="req">*</span></label>
-        <input type="text" name="שם השולח" required placeholder="מי שולח?">
-      </div>
-      <div class="field">
-        <label>אימייל לחזרה (אופציונלי)</label>
-        <input type="email" name="email" placeholder="name@example.com">
-      </div>
-    </div>
-
-    <div class="field">
-      <label>הערות (אופציונלי)</label>
-      <textarea name="הערות" style="min-height:70px" placeholder="טיפים, סיפור מאחורי המתכון…"></textarea>
-    </div>
-
-    <input type="hidden" name="_subject" value="מתכון חדש מהאתר של תמר">
-    <button type="submit">שליחה לאישור</button>
-  </form>
+<meta name="description" content="שלחו מתכון משפחתי לאתר המתכונים של תמר.">
+<link rel="canonical" href="https://azmaveze.github.io/tamar-recipes/add-recipe.html">
+<meta name="theme-color" content="#6E5591">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="המתכונים של תמר">
+<meta property="og:title" content="הוספת מתכון — המתכונים של תמר">
+<meta property="og:description" content="שלחו מתכון משפחתי לאתר המתכונים של תמר.">
+<meta property="og:url" content="https://azmaveze.github.io/tamar-recipes/add-recipe.html">
+<meta property="og:image" content="https://azmaveze.github.io/tamar-recipes/images/keren-cheesecake.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Assistant:wght@400;500;600;700&family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">דלגו לתוכן</a><header class="site-header"><div class="wrap"><a class="brand" href="./">המתכונים של תמר</a><nav class="site-nav" aria-label="ראשי"><a href="recipes.html">מתכונים</a><a href="categories.html">קטגוריות</a><a href="about.html">אודות</a></nav><a class="cta" href="add-recipe.html">＋ הוספת מתכון</a></div></header>
+<main id="main" class="wrap">
+<div class="page-head"><h1>הוספת מתכון</h1><p class="kicker">יש לכם מתכון משפחתי? שלחו אותו לתמר 🧡</p></div>
+<div class="form">
+<p class="notice">השליחה נעשית <b>בוואטסאפ</b>: אחרי הלחיצה ייפתח וואטסאפ עם המתכון. שם תוכלו לבחור לשלוח לתמר ולצרף תמונה של הדף.</p>
+<div id="form-ok" class="status ok" role="status" tabindex="-1" hidden>
+<p data-text>🧡 תודה רבה! המתכון הגיע לתמר. אחרי בדיקה קטנה הוא יעלה לאתר. אם השארתם כתובת מייל, נעדכן אתכם כשהוא באוויר.</p>
+<a href="add-recipe.html">לשליחת מתכון נוסף</a></div>
+<div id="form-err" class="status err" role="alert" tabindex="-1" hidden>
+<p data-text>אופס, השליחה לא הצליחה. נסו שוב בעוד רגע.</p></div>
+<form data-recipe-form data-formspree="">
+<input type="hidden" name="_subject" value="מתכון חדש מהאתר של תמר">
+<fieldset><legend>על המתכון</legend>
+<div class="field"><label for="f-name">שם המתכון <span class="req" aria-hidden="true">*</span><span class="sr-only">(חובה)</span></label>
+<input id="f-name" name="שם המתכון" required aria-required="true" placeholder="למשל: עוגת גבינה של סבתא"></div>
+<div class="row2">
+<div class="field"><label for="f-cat">קטגוריה</label>
+<select id="f-cat" name="קטגוריה"><option value="">בחרו קטגוריה</option><option>עוגות</option><option>פאים וטארטים</option><option>עוגיות</option><option>מאפים</option><option>מנות עיקריות</option><option>תוספות וסלטים</option><option>לא בטוח/ה</option></select></div>
+<div class="field"><label for="f-kosher">כשרות</label>
+<select id="f-kosher" name="כשרות"><option value="">בחרו</option><option>חלבי</option><option>פרווה</option><option>בשרי</option></select></div>
+</div>
+<div class="row2">
+<div class="field"><label for="f-time">זמן הכנה</label><input id="f-time" name="זמן הכנה" placeholder="למשל: שעה"></div>
+<div class="field"><label for="f-yield">כמות / תבנית</label><input id="f-yield" name="כמות" placeholder="למשל: תבנית מלבנית"></div>
+</div>
+<div class="field"><label for="f-src">של מי המתכון?</label><input id="f-src" name="מקור" placeholder="למשל: מהקלסר של סבתא"></div>
+</fieldset>
+<fieldset><legend>המתכון</legend>
+<p class="hint">אין זמן להקליד? אפשר להשאיר את השדות האלה ריקים ולשלוח תמונה של הדף.</p>
+<div class="field"><label for="f-ing">מצרכים</label><textarea id="f-ing" name="מצרכים" placeholder="שורה לכל מצרך…"></textarea></div>
+<div class="field"><label for="f-steps">אופן ההכנה</label><textarea id="f-steps" name="אופן ההכנה" placeholder="שלב אחרי שלב…"></textarea></div>
+<div class="field"><label for="f-img">קישור לתמונה (לא חובה)</label>
+<input id="f-img" type="url" name="קישור לתמונה" placeholder="https://" aria-describedby="f-img-hint">
+<p class="hint" id="f-img-hint">אין תמונה ברשת? אפשר לצרף אותה בוואטסאפ.</p></div>
+</fieldset>
+<fieldset><legend>מי שולח?</legend>
+<div class="row2">
+<div class="field"><label for="f-sender">השם שלכם <span class="req" aria-hidden="true">*</span><span class="sr-only">(חובה)</span></label>
+<input id="f-sender" name="שם השולח" required aria-required="true" autocomplete="name"></div>
+<div class="field"><label for="f-email">אימייל לעדכון (לא חובה)</label>
+<input id="f-email" type="email" name="email" autocomplete="email" placeholder="name@example.com"></div>
+</div>
+<div class="field"><label for="f-notes">הערות או הסיפור מאחורי המתכון (לא חובה)</label>
+<textarea id="f-notes" name="הערות" style="min-height:80px"></textarea></div>
+</fieldset>
+<button type="submit" class="btn btn-brand">שליחה לאישור</button>
+</form>
+</div>
 </main>
-<footer>המתכונים של תמר · <span style="font-family:'Amatic SC',cursive;font-size:22px;color:#3C4C6E">בתיאבון!</span></footer>
-
-<script>
-(function(){
-  var form=document.getElementById('recipeForm'), ok=document.getElementById('ok');
-  form.addEventListener('submit', async function(e){
-    e.preventDefault();
-    if(form.action.indexOf('FORMSPREE_ID')>-1){
-      alert('הטופס עדיין בהקמה — נתחבר לשירות השליחה בקרוב.');
-      return;
-    }
-    try{
-      var res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-      if(res.ok){ form.style.display='none'; ok.style.display='block'; ok.scrollIntoView({behavior:'smooth'}); }
-      else{ alert('אופס — השליחה נכשלה. נסו שוב, או שלחו את המתכון במייל.'); }
-    }catch(err){ alert('אין חיבור כרגע. נסו שוב עוד רגע.'); }
-  });
-})();
-</script>
-</body></html>
+<footer class="site-footer"><div class="wrap"><span>המתכונים של תמר · <span class="bete">בתיאבון!</span></span><nav aria-label="קישורים נוספים"><a href="about.html">אודות</a><a href="add-recipe.html">הוספת מתכון</a><a href="accessibility.html">הצהרת נגישות</a></nav></div></footer>
+</body>
+</html>

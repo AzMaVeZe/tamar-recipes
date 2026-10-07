@@ -1,0 +1,333 @@
+{
+  "site": {
+    "title": "המתכונים של תמר",
+    "url": "https://azmaveze.github.io/tamar-recipes/",
+    "hero_title": "מה מבשלים היום?",
+    "hero_sub": "מתכוני המשפחה — מהקלסר, מהפתקים ומהלב",
+    "description": "המתכונים של תמר: מתכוני משפחה מהפנקס, מהקלסר ומהפתקים הצהובים. עוגות, פאים, מאפים, מנות עיקריות ותוספות, עם הסריקה של המתכון המקורי.",
+    "og_image": "images/keren-cheesecake.jpg",
+    "hero_bg": "images/keren-cheesecake.jpg",
+    "formspree_id": ""
+  },
+  "categories": [
+    {
+      "name": "עוגות",
+      "slug": "cakes"
+    },
+    {
+      "name": "פאים וטארטים",
+      "slug": "pies"
+    },
+    {
+      "name": "עוגיות",
+      "slug": "cookies"
+    },
+    {
+      "name": "מאפים",
+      "slug": "bakes"
+    },
+    {
+      "name": "מנות עיקריות",
+      "slug": "mains"
+    },
+    {
+      "name": "תוספות וסלטים",
+      "slug": "sides"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "recipe-01",
+      "title": "פאי רועים",
+      "source": "של אמא",
+      "kosher": "בשרי",
+      "tags": [],
+      "time": "שעה",
+      "yield": "6 מנות",
+      "category": "מנות עיקריות",
+      "image": "shepherds-pie.jpg"
+    },
+    {
+      "id": "recipe-02",
+      "title": "פאי פיצוחים בקרמל",
+      "source": "מהקלסר של תמר",
+      "kosher": "פרווה",
+      "tags": [],
+      "time": "50 דקות",
+      "yield": "תבנית 4 ס\"מ",
+      "category": "פאים וטארטים",
+      "image": "caramel-pie.jpg"
+    },
+    {
+      "id": "recipe-03",
+      "title": "עוגת גבינה בראוניז",
+      "source": "דבי יעל",
+      "kosher": "חלבי",
+      "tags": [],
+      "time": "שעה",
+      "yield": "תבנית מלבנית",
+      "category": "עוגות",
+      "image": "cheese-brownies.jpg"
+    },
+    {
+      "id": "recipe-04",
+      "title": "בואיקוס בולגריים קלים",
+      "source": "מהמשפחה",
+      "kosher": "חלבי",
+      "tags": [],
+      "time": "40 דקות",
+      "yield": "30-35 יחידות",
+      "category": "מאפים",
+      "image": "boyikos.jpg"
+    },
+    {
+      "id": "recipe-05",
+      "title": "ביף וולינגטון",
+      "source": "גורדון רמזי",
+      "kosher": "בשרי",
+      "tags": [
+        "חגיגי"
+      ],
+      "time": "שעתיים",
+      "yield": "3 מנות",
+      "category": "מנות עיקריות",
+      "image": "wellington.jpg"
+    },
+    {
+      "id": "recipe-06",
+      "title": "עוגת השוקולד של רינה",
+      "source": "אביטל מכינה אותה כל שבת, וגם תמר",
+      "kosher": "פרווה",
+      "tags": [
+        "קלה"
+      ],
+      "time": "45 דקות",
+      "yield": "תבנית קפיצית",
+      "category": "עוגות",
+      "image": "rina-chocolate.jpg"
+    },
+    {
+      "id": "recipe-07",
+      "title": "עוגיות ספקולאס",
+      "source": "מהקלסר של תמר",
+      "kosher": "חלבי",
+      "tags": [
+        "מתובל"
+      ],
+      "time": "40 דקות",
+      "yield": "תבנית עוגיות",
+      "category": "עוגיות",
+      "image": "speculaas.jpg"
+    },
+    {
+      "id": "recipe-08",
+      "title": "פוקאצ׳ה קלאסית עם שום ורוזמרין",
+      "source": "גזיר עיתון, 2018",
+      "kosher": "פרווה",
+      "tags": [
+        "לחם"
+      ],
+      "time": "שעתיים וחצי",
+      "yield": "תבנית 30x20",
+      "category": "מאפים",
+      "image": "focaccia.jpg"
+    },
+    {
+      "id": "recipe-09",
+      "title": "אורז עם בשר טחון ובהרט",
+      "source": "דנה אלמוסני",
+      "kosher": "בשרי",
+      "tags": [
+        "סיר אחד"
+      ],
+      "time": "שעה",
+      "yield": "6 מנות",
+      "category": "מנות עיקריות",
+      "image": "rice-bharat.jpg"
+    },
+    {
+      "id": "recipe-10",
+      "title": "סלט מלפפונים",
+      "source": "מהמשפחה",
+      "kosher": "פרווה",
+      "tags": [
+        "טרי",
+        "חמוץ-מתוק"
+      ],
+      "time": "10 דקות",
+      "yield": "תוספת לשולחן",
+      "category": "תוספות וסלטים",
+      "image": "cucumber-salad.jpg"
+    },
+    {
+      "id": "recipe-11",
+      "title": "טארטלט שוקולד נוגט",
+      "source": "חני פיין",
+      "kosher": "חלבי",
+      "tags": [
+        "מושקע"
+      ],
+      "time": "שעה וחצי",
+      "yield": "טארט + טארטלטים קטנים",
+      "category": "פאים וטארטים",
+      "image": "nougat-tartlet.jpg"
+    },
+    {
+      "id": "recipe-12",
+      "title": "טארטלט פסיפלורה",
+      "source": "חני פיין",
+      "kosher": "חלבי",
+      "tags": [
+        "פירותי"
+      ],
+      "time": "שעה",
+      "yield": "טארטלטים",
+      "category": "פאים וטארטים",
+      "image": "tartlets.jpg"
+    },
+    {
+      "id": "recipe-13",
+      "title": "טארטלט שקדים פרנג׳יפאן",
+      "source": "חני פיין",
+      "kosher": "חלבי",
+      "tags": [],
+      "time": "שעה",
+      "yield": "טארטלטים",
+      "category": "פאים וטארטים",
+      "image": "tartlets.jpg"
+    },
+    {
+      "id": "recipe-14",
+      "title": "גלילות חזה עוף ברוטב פלפלים",
+      "source": "מהקלסר של תמר",
+      "kosher": "בשרי",
+      "tags": [],
+      "time": "שעה וחצי",
+      "yield": "תבנית גדולה",
+      "category": "מנות עיקריות",
+      "image": "chicken-rolls.jpg"
+    },
+    {
+      "id": "recipe-15",
+      "title": "קציצות בשר ברוטב מתקתק",
+      "source": "מהספר של אביטל",
+      "kosher": "בשרי",
+      "tags": [],
+      "time": "שעה וחצי",
+      "yield": "סיר גדול",
+      "category": "מנות עיקריות",
+      "image": "avital-meatballs.jpg"
+    },
+    {
+      "id": "recipe-16",
+      "title": "הקציצות של חלי לופצ׳י",
+      "source": "חלי",
+      "kosher": "בשרי",
+      "tags": [
+        "מתובל"
+      ],
+      "time": "שעה",
+      "yield": "6 מנות",
+      "category": "מנות עיקריות",
+      "image": "heli-meatballs.jpg"
+    },
+    {
+      "id": "recipe-17",
+      "title": "הקוגל של כל שבת",
+      "source": "מהפנקס",
+      "kosher": "פרווה",
+      "tags": [
+        "שבת"
+      ],
+      "time": "שעה וחצי",
+      "yield": "תבנית גדולה",
+      "category": "תוספות וסלטים",
+      "image": "shabbat-kugel.jpg"
+    },
+    {
+      "id": "recipe-18",
+      "title": "עוגיות לימון",
+      "source": "שסמי אוהבת",
+      "kosher": "פרווה",
+      "tags": [],
+      "time": "שעתיים וחצי",
+      "yield": "תבנית עוגיות",
+      "category": "עוגיות",
+      "image": "lemon-cookies.jpg"
+    },
+    {
+      "id": "recipe-19",
+      "title": "הבראוניז של מיסיסיפי",
+      "source": "מהפתק הצהוב",
+      "kosher": "חלבי",
+      "tags": [
+        "שוקולדי"
+      ],
+      "time": "שעה",
+      "yield": "תבנית מלבנית",
+      "category": "עוגות",
+      "image": "mississippi.jpg",
+      "hidden": true,
+      "hidden_reason": "No scan of this recipe yet; the image previously shown was the lemon-cookies card."
+    },
+    {
+      "id": "recipe-20",
+      "title": "עוגת גבינה טופו",
+      "source": "דבי יעל",
+      "kosher": "חלבי",
+      "tags": [],
+      "time": "שעה",
+      "yield": "תבנית קפיצית",
+      "category": "עוגות",
+      "image": "tofu-cheesecake.jpg"
+    },
+    {
+      "id": "recipe-21",
+      "title": "עוגת גבינה פירורים אפויה",
+      "source": "קרן גורן",
+      "kosher": "חלבי",
+      "tags": [
+        "קלאסיקה"
+      ],
+      "time": "שעה וחצי",
+      "yield": "תבנית גדולה",
+      "category": "עוגות",
+      "image": "keren-cheesecake.jpg"
+    },
+    {
+      "id": "recipe-22",
+      "title": "פאי תפוחים של אורה",
+      "source": "אורה",
+      "kosher": "פרווה",
+      "tags": [
+        "פירותי"
+      ],
+      "time": "שעה וחצי",
+      "yield": "תבנית פאי",
+      "category": "פאים וטארטים",
+      "image": "ora-apple-pie.jpg"
+    },
+    {
+      "id": "recipe-23",
+      "title": "קציצות ממולאות",
+      "source": "מהפנקס הישן · כתב היד קשה לפענוח",
+      "kosher": "בשרי",
+      "tags": [],
+      "time": "שעה",
+      "yield": "סיר",
+      "category": "מנות עיקריות",
+      "image": "stuffed-meatballs.jpg"
+    },
+    {
+      "id": "recipe-24",
+      "title": "קוגל תפוחי עץ",
+      "source": "מהפנקס הישן",
+      "kosher": "פרווה",
+      "tags": [],
+      "time": "50 דקות",
+      "yield": "8 מנות",
+      "category": "עוגות",
+      "image": "apple-cake.jpg"
+    }
+  ]
+}
